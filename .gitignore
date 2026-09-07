@@ -1,2 +1,5 @@
 .env
 sample.pdf
+extracted_facts.json
+starter-datasets/
+superjoin-vit-2026-assignment.pdf
