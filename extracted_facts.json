@@ -1,0 +1,402 @@
+[
+    {
+        "fact": "Chapter 1 focuses on the state of the economy and getting back into the fast lane.",
+        "source_quote": "1 STATE OF THE ECONOMY: GETTING BACK INTO THE FAST",
+        "page_number": 1
+    },
+    {
+        "fact": "Chapter 2 addresses monetary and financial sector developments.",
+        "source_quote": "2 MONETARY AND FINANCIAL SECTOR DEVELOPMENTS :",
+        "page_number": 1
+    },
+    {
+        "fact": "Chapter 3 covers the external sector and foreign direct investment (FDI).",
+        "source_quote": "3 EXTERNAL SECTOR: GETTING FDI RIGHT",
+        "page_number": 1
+    },
+    {
+        "fact": "Chapter 4 examines prices and inflation dynamics.",
+        "source_quote": "4 PRICES AND INFLATION : UNDERSTANDING THE DYNAMICS",
+        "page_number": 1
+    },
+    {
+        "fact": "Chapter 5 discusses medium term outlook and how deregulation drives growth.",
+        "source_quote": "5 MEDIUM TERM OUTLOOK : DEREGULATION DRIVES GROWTH",
+        "page_number": 1
+    },
+    {
+        "fact": "Chapter 6 is titled 'INVESTMENT AND INFRASTRUCTURE : KEEPING IT GOING'.",
+        "source_quote": "6 INVESTMENT AND INFRASTRUCTURE : KEEPING IT GOING",
+        "page_number": 2
+    },
+    {
+        "fact": "Infrastructure Capex Improves Post-Election is covered starting on page 164.",
+        "source_quote": "164 Infrastructure Capex Improves Post-Election",
+        "page_number": 2
+    },
+    {
+        "fact": "Chapter 7 is titled 'INDUSTRY: ALL ABOUT BUSINESS REFORMS'.",
+        "source_quote": "7 INDUSTRY: ALL ABOUT BUSINESS REFORMS",
+        "page_number": 2
+    },
+    {
+        "fact": "Chapter 8 is titled 'SERVICES: NEW CHALLENGES FOR THE OLD WAR HORSE'.",
+        "source_quote": "8 SERVICES: NEW CHALLENGES FOR THE OLD WAR HORSE",
+        "page_number": 2
+    },
+    {
+        "fact": "Chapter 9 is titled 'AGRICULTURE AND FOOD MANAGEMENT: SECTOR OF THE FUTURE'.",
+        "source_quote": "9 AGRICULTURE AND FOOD MANAGEMENT: SECTOR OF THE FUTURE",
+        "page_number": 2
+    },
+    {
+        "fact": "Climate Action in Agriculture is a key topic addressed starting on page 263.",
+        "source_quote": "263 Climate Action In Agriculture",
+        "page_number": 3
+    },
+    {
+        "fact": "Air pollution is covered under the Climate and Environment section starting on page 297.",
+        "source_quote": "297 Air Pollution",
+        "page_number": 3
+    },
+    {
+        "fact": "Chapter 10 focuses on Climate and Environment: Adaptation Matters.",
+        "source_quote": "10 CLIMATE AND ENVIRONMENT: ADAPTATION MATTERS",
+        "page_number": 3
+    },
+    {
+        "fact": "Chapter 13 explores the theme Labour in the AI Era: Crisis or Catalyst?",
+        "source_quote": "13 LABOUR IN THE AI ERA: CRISIS OR CATALYST?",
+        "page_number": 3
+    },
+    {
+        "fact": "The global economy experienced steady yet uneven growth across regions in 2024.",
+        "source_quote": "The global economy exhibited steady yet uneven growth across regions in 2024.",
+        "page_number": 4
+    },
+    {
+        "fact": "Inflationary pressures decreased in a majority of economies.",
+        "source_quote": "Inflationary pressures eased in most economies.",
+        "page_number": 4
+    },
+    {
+        "fact": "India demonstrated steady economic performance despite the broader global environment.",
+        "source_quote": "In this global context, India displayed steady economic growth.",
+        "page_number": 4
+    },
+    {
+        "fact": "India's economic prospects for FY26 are considered balanced.",
+        "source_quote": "Looking ahead, India\u2019s economic prospects for FY26 are balanced.",
+        "page_number": 4
+    },
+    {
+        "fact": "The global economy recorded a growth rate of 3.3 per cent in 2023.",
+        "source_quote": "The global economy grew by 3.3 per cent in 2023.",
+        "page_number": 5
+    },
+    {
+        "fact": "The International Monetary Fund projects global economic growth at 3.2 per cent for 2024 and 3.3 per cent for 2025.",
+        "source_quote": "The International Monetary Fund (IMF) has projected growth of 3.2 per cent and 3.3 per cent for 2024 and 2025, respectively.",
+        "page_number": 5
+    },
+    {
+        "fact": "Global economic growth is anticipated to average roughly 3.2 per cent over the next five years.",
+        "source_quote": "Over the next five years, global growth is expected to average around 3.2 per cent, which is modest by historical standards.",
+        "page_number": 5
+    },
+    {
+        "fact": "In 2024, more than half of the world's population participated in major elections.",
+        "source_quote": "The year witnessed unprecedented electoral activity on the political front, with more than half of the global population voting in major elections across countries.",
+        "page_number": 5
+    },
+    {
+        "fact": "Advanced economies (AEs) experienced stable growth during the first half of 2024 despite higher interest rates.",
+        "source_quote": "Despite higher interest rates, advanced economies (AEs) witnessed stable growth in the first half of 2024.",
+        "page_number": 6
+    },
+    {
+        "fact": "US economic growth is expected to remain strong at 2.8 per cent in 2024 and slightly decline in 2025 due to a moderation in consumption and exports.",
+        "source_quote": "Growth in the US is expected to remain strong at 2.8 per cent in 2024 and may decline slightly in 2025, reflecting a moderation in consumption and exports.",
+        "page_number": 6
+    },
+    {
+        "fact": "Growth in the Euro area is expected to rise from 0.4 per cent in 2023 to 0.8 per cent in 2024 and 1.0 per cent in 2025.",
+        "source_quote": "In the Euro area, growth is expected to improve from 0.4 per cent in 2023 to 0.8 per cent in 2024 and further to 1.0 per cent in 2025 on the back of improving services activity.",
+        "page_number": 6
+    },
+    {
+        "fact": "Weak demand is weighing down manufacturing-intensive countries in Europe like Germany and Austria.",
+        "source_quote": "Meanwhile, manufacturing-intensive countries like Germany and Austria are being weighed down by weak demand.",
+        "page_number": 6
+    },
+    {
+        "fact": "Between January 2023 and November 2024, US economic data consistently presented more positive surprises compared to analyst estimates than the EU data did.",
+        "source_quote": "Between January 2023 and November 2024, data for the US economy continued to present more \u2018positive\u2019 surprises than the EU, compared to the analyst estimates.",
+        "page_number": 7
+    },
+    {
+        "fact": "Japan's economic growth was constrained early in the year due to domestic supply disruptions.",
+        "source_quote": "Japan's growth was hindered by domestic supply disruptions in the early part of the year",
+        "page_number": 7
+    },
+    {
+        "fact": "China's economic growth slowed after the first quarter due to weak private consumption, sluggish investment, and difficulties in the real estate market.",
+        "source_quote": "China\u2019s growth weakened after the first quarter, affected by sluggish private consumption and investment, alongside challenges in the real estate sector.",
+        "page_number": 7
+    },
+    {
+        "fact": "As of December 2024, the global composite Purchasing Managers' Index (PMI) remained in expansion territory for 14 consecutive months.",
+        "source_quote": "The global composite Purchasing Managers\u2019 Index (PMI) has stayed in the expansion zone for the fourteenth month in a row (as of December 2024).",
+        "page_number": 7
+    },
+    {
+        "fact": "The global manufacturing sector stabilized in November with a PMI value of 50.0 following four months of gradual decline.",
+        "source_quote": "Following four months of gradual declines, the global manufacturing sector stabilised in November with an index value of 50.0, indicating no overall change in operating conditions.",
+        "page_number": 7
+    },
+    {
+        "fact": "Global manufacturing stabilized in November 2024.",
+        "source_quote": "Chart I.5: Global manufacturing stabilises in November 2024",
+        "page_number": 8
+    },
+    {
+        "fact": "Production trends varied widely across different regions in December.",
+        "source_quote": "Production trends varied widely across regions in December",
+        "page_number": 8
+    },
+    {
+        "fact": "Out of 30 nations with available December PMI data, production rose in 13.",
+        "source_quote": "Production rose in 13 of the 30 nations for which December PMI data were available.",
+        "page_number": 8
+    },
+    {
+        "fact": "The Eurozone experienced the steepest contractions, driven by France, Germany, and Austria.",
+        "source_quote": "The Eurozone saw the steepest contractions, led by France, Germany, and Austria.",
+        "page_number": 8
+    },
+    {
+        "fact": "Canada's growth in North America was offset by contractions in the US and Mexico.",
+        "source_quote": "North America showed mixed results, with Canada\u2019s growth offset by declines in the US\nand Mexico.",
+        "page_number": 8
+    },
+    {
+        "fact": "India achieved the strongest expansion of output among regions.",
+        "source_quote": "India reported the strongest expansion of output.",
+        "page_number": 8
+    },
+    {
+        "fact": "Global manufacturing business sentiment fell to a three-month low in December.",
+        "source_quote": "The outlook for global\nmanufacturing also remained subdued in December, with business sentiment dipping to\na three-month low.",
+        "page_number": 8
+    },
+    {
+        "fact": "Financial services recorded the fastest pace of expansion among global services.",
+        "source_quote": "Financial services experienced the fastest pace of expansion.",
+        "page_number": 9
+    },
+    {
+        "fact": "Core goods inflation has decreased to negligible levels.",
+        "source_quote": "while core goods inflation has fallen to negligible levels.",
+        "page_number": 9
+    },
+    {
+        "fact": "Higher nominal wage growth compared to pre-pandemic trends contributed to disinflation slowing down according to the IMF WEO October 2024 report.",
+        "source_quote": "nominal wage growth as compared to pre-pandemic trends.",
+        "page_number": 9
+    },
+    {
+        "fact": "Recent disruptions in global shipping have increased goods prices and placed pressure on global supply chains.",
+        "source_quote": "However, recent disruptions in global shipping have pushed goods prices up. These events have also pressurised the global supply chains.",
+        "page_number": 10
+    },
+    {
+        "fact": "Container freight rates experienced a significant surge in 2024 after normalising in 2023.",
+        "source_quote": "Chart I.10 shows that while container freight rates normalised in 2023, they experienced a significant surge in 2024.",
+        "page_number": 10
+    },
+    {
+        "fact": "Commodity prices are expected to moderately decline after softening in 2024.",
+        "source_quote": "After softening in 2024, commodity prices are expected to decline moderately (Chart I.12).",
+        "page_number": 10
+    },
+    {
+        "fact": "Major central banks have begun lowering policy rates to take advantage of the steep decline in inflation.",
+        "source_quote": "Taking advantage of the steep decline in inflation, major central banks have implemented a policy pivot to lower policy rates.",
+        "page_number": 10
+    },
+    {
+        "fact": "In the short term, US market expectations of the Federal Funds Rate were much lower than the actual level for both 2023 and 2024.",
+        "source_quote": "In the short term, the US market expectations of the Federal Funds Rate (FFR) were much lower than the actual FFR level for both 2023 and 2024.",
+        "page_number": 11
+    },
+    {
+        "fact": "The Federal Open Market Committee presents a dot-plot illustrating its members' assessment of the direction of the policy rate across different time horizons.",
+        "source_quote": "The Federal Open Market Committee (FOMC) presents a dot-plot of its members\u2019 assessment of the direction of the policy rate over different time horizons.",
+        "page_number": 11
+    },
+    {
+        "fact": "Chart I.13 displays dot-plots representing FOMC members' assessments in December 2021, December 2023, and December 2024.",
+        "source_quote": "Chart I.13 presents the dot-plots that represented the FOMC members\u2019 assessments in December 2021, December 2023, and December 2024.",
+        "page_number": 11
+    },
+    {
+        "fact": "The global oil market is currently well-supplied, though damage to infrastructure could tighten supply.",
+        "source_quote": "The oil market is well-supplied for now.",
+        "page_number": 13
+    },
+    {
+        "fact": "The increase in the World Trade Uncertainty Index is propelled by trade tensions and policy changes in major economies.",
+        "source_quote": "driven by trade tensions and policy shifts in major economies.",
+        "page_number": 13
+    },
+    {
+        "fact": "Trade-restrictive measures affect 12.7 per cent of G20 imports, which is over three times the coverage seen in 2015.",
+        "source_quote": "affecting 12.7 per cent of G20 imports\u2014more than three times the coverage of",
+        "page_number": 14
+    },
+    {
+        "fact": "PFCE share of GDP at current prices is estimated to rise to 61.8 per cent in FY25, reaching its highest level since FY03.",
+        "source_quote": "60.3 per cent in FY24 to 61.8 per cent in FY25. This share is the highest since FY03.",
+        "page_number": 14
+    },
+    {
+        "fact": "The industrial sector is estimated to grow by 6.2 per cent in FY25.",
+        "source_quote": "The industrial sector is estimated to grow by 6.2 per cent in FY25.",
+        "page_number": 14
+    },
+    {
+        "fact": "Aggregate GVA surpassed its pre-pandemic trend in Q1 FY25.",
+        "source_quote": "Aggregate GVA surpassed its pre-pandemic trend in Q1 FY25",
+        "page_number": 15
+    },
+    {
+        "fact": "The agriculture sector consistently operates well above pre-pandemic trend levels.",
+        "source_quote": "The agriculture sector remains strong, consistently operating well above trend levels.",
+        "page_number": 15
+    },
+    {
+        "fact": "Manufacturing is steadily recovering but remains slightly below its pre-pandemic trajectory.",
+        "source_quote": "Manufacturing, while steadily recovering, remains slightly below its pre-pandemic trajectory.",
+        "page_number": 15
+    },
+    {
+        "fact": "The mining sector continues to operate below its pre-pandemic trend.",
+        "source_quote": "Meanwhile, mining continues to operate below its pre-pandemic trend.",
+        "page_number": 15
+    },
+    {
+        "fact": "Construction GVA is operating well above its trend levels.",
+        "source_quote": "Construction GVA operating well above trend levels",
+        "page_number": 16
+    },
+    {
+        "fact": "Manufacturing GVA is gradually recovering.",
+        "source_quote": "manufacturing GVA gradually recovering",
+        "page_number": 16
+    },
+    {
+        "fact": "Chart I.21 displays the Deseasonalised GVA and the Pre-pandemic trend.",
+        "source_quote": "Deseasonalised GVA",
+        "page_number": 16
+    },
+    {
+        "fact": "Chart I.22 displays Deseasonalised Agriculture GVA.",
+        "source_quote": "Deseasonalised Agriculture GVA",
+        "page_number": 16
+    },
+    {
+        "fact": "Chart I.23 displays Deseasonalised Industry GVA.",
+        "source_quote": "Deseasonalised Industry GVA",
+        "page_number": 16
+    },
+    {
+        "fact": "Chart I.24 displays Deseasonalised Services GVA.",
+        "source_quote": "Deseasonalised Services GVA",
+        "page_number": 16
+    },
+    {
+        "fact": "Real Gross Value Added (GVA) grew by 6.2 per cent in H1 FY25.",
+        "source_quote": "The real GVA grew by 6.2 per cent in H1 FY25.",
+        "page_number": 17
+    },
+    {
+        "fact": "Agricultural growth in Q2 FY25 recorded a growth rate of 3.5 per cent.",
+        "source_quote": "Agriculture growth remained steady in H1 FY25, with Q2 recording a growth rate of 3.5 per cent, marking an improvement over the previous four quarters.",
+        "page_number": 17
+    },
+    {
+        "fact": "Total Kharif food grain production for 2024-25 is estimated at a record 1647.05 lakh metric tonnes.",
+        "source_quote": "total Kharif food grain production is estimated at a record 1647.05 lakh metric tonnes (LMT), higher by 5.7 per cent compared to 2023-24 and 8.2 per cent higher than the average food grain production in the past five years.",
+        "page_number": 17
+    },
+    {
+        "fact": "FREPS refers to Financial, real estate and professional services.",
+        "source_quote": "FREPS- Financial, real estate and professional services",
+        "page_number": 17
+    },
+    {
+        "fact": "PADOS refers to Public administration, defence & other services.",
+        "source_quote": "PADOS - Public administration, defence & other services.",
+        "page_number": 17
+    },
+    {
+        "fact": "Rabi sowing of wheat and gram increased by 1.4 per cent and 0.8 per cent respectively compared to the previous year.",
+        "source_quote": "rabi sowing of wheat and gram was 1.4 per cent and 0.8 per cent higher, respectively,\ncompared to the previous year.",
+        "page_number": 18
+    },
+    {
+        "fact": "The industrial sector grew by 6 per cent in the first half of FY25.",
+        "source_quote": "The industrial sector grew by 6 per cent in H1 FY25.",
+        "page_number": 18
+    },
+    {
+        "fact": "Industrial growth saw a strong rate of 8.3 per cent in Q1 before moderating in Q2.",
+        "source_quote": "Q1 saw a strong growth of 8.3\nper cent, but growth moderated in Q2 due to three key factors.",
+        "page_number": 18
+    },
+    {
+        "fact": "The Manufacturing PMI expansion rate for December 2024 exceeded its long-term average.",
+        "source_quote": "The expansion rate for December 2024 exceeded its long-term average, driven by\nnew business gains, robust demand, and advertising efforts.",
+        "page_number": 18
+    },
+    {
+        "fact": "Private Final Consumption Expenditure firmed up in H1 FY25, growing by 6.7 per cent YoY.",
+        "source_quote": "firmed up in H1 FY25, growing by 6.7 per cent YoY.",
+        "page_number": 20
+    },
+    {
+        "fact": "Hotel occupancy rates in H1 FY25 were similar to the previous year.",
+        "source_quote": "hotel occupancy rates in H1 FY25 similar to the previous year.",
+        "page_number": 20
+    },
+    {
+        "fact": "78.5 per cent of rural households reported an increase in their consumption expenditure during the last year.",
+        "source_quote": "78.5 per cent of rural households reported an increase in their consumption expenditure",
+        "page_number": 20
+    },
+    {
+        "fact": "Information Technology companies performed better than the previous quarter.",
+        "source_quote": "Technology (IT) companies also performed better than the previous quarter.",
+        "page_number": 20
+    },
+    {
+        "fact": "Urban demand indicators presented mixed trends.",
+        "source_quote": "indicators of urban demand presented mixed trends.",
+        "page_number": 21
+    },
+    {
+        "fact": "Air passenger traffic grew steadily by 7.7 per cent YoY in April \u2013 November 2024.",
+        "source_quote": "steady growth of 7.7 per cent YoY in air passenger traffic in April \u2013 November 2024.",
+        "page_number": 21
+    },
+    {
+        "fact": "Capital expenditure across government levels slowed down in Q1 FY25 due to general elections.",
+        "source_quote": "levels of government on account of the conduct of the general elections.",
+        "page_number": 21
+    },
+    {
+        "fact": "An inventory overhang of 23 months signals healthy demand momentum in the segment.",
+        "source_quote": "overhang of 23 months signals healthy demand momentum in the segment.",
+        "page_number": 21
+    }
+]
