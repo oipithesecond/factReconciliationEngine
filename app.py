@@ -61,7 +61,40 @@ def render_fact_card(item):
         st.info(f"**Source Quote:**\n> {fact_data.get('source_quote', 'N/A')}")
         
         st.markdown(f"**Agent Reasoning:**")
-        st.write(reasoning if reasoning else "No specific reasoning provided.")
+        if not reasoning:
+            st.write("No specific reasoning provided.")
+        elif "Skeptic flagged:" in reasoning and "Reconciler verdict:" in reasoning:
+            parts = reasoning.split("Reconciler verdict:")
+            skeptic_part = parts[0].replace("Skeptic flagged:", "").strip()
+            reconciler_part = parts[1].strip()
+            
+            st.warning(f"** Skeptic Flagged:**\n\n{skeptic_part}")
+            
+            if status == "Reconciled by Context":
+                st.success(f"** Reconciler Verdict (Reconciled by Context):**\n\n{reconciler_part}")
+            elif status == "Contradiction":
+                st.error(f"** Reconciler Verdict (Contradiction):**\n\n{reconciler_part}")
+            else:
+                st.info(f"** Reconciler Verdict:**\n\n{reconciler_part}")
+                
+        elif "Skeptic confirmed alignment:" in reasoning:
+            skeptic_part = reasoning.replace("Skeptic confirmed alignment:", "").strip()
+            st.success(f"** Skeptic Confirmed Alignment:**\n\n{skeptic_part}")
+            
+        elif "Skeptic found facts to be unrelated:" in reasoning:
+            skeptic_part = reasoning.replace("Skeptic found facts to be unrelated:", "").strip()
+            st.info(f"** Skeptic Found Facts to be Unrelated:**\n\n{skeptic_part}")
+            
+        elif "Skeptic flagged issue:" in reasoning and "Reconciler failed:" in reasoning:
+            parts = reasoning.split("| Reconciler failed:")
+            skeptic_part = parts[0].replace("Skeptic flagged issue:", "").strip()
+            reconciler_part = parts[1].strip()
+            
+            st.warning(f"** Skeptic Flagged:**\n\n{skeptic_part}")
+            st.error(f"** Reconciler Failed:**\n\n{reconciler_part}")
+            
+        else:
+            st.write(reasoning)
         
         if retrieved_facts:
             st.markdown("**Historical Facts Compared:**")

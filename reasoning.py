@@ -18,26 +18,31 @@ def evaluate_fact_with_skeptic(client, model_name, new_fact, retrieved_facts, ma
         "or they present mutually exclusive realities. "
         "If they are completely unrelated (e.g., different time periods, different metrics), do NOT flag it. "
         "If they agree and support each other, do NOT flag it.\n"
+        "IMPORTANT: When explaining your reasoning, you MUST explicitly quote the exact source texts (using the provided 'source_quote', 'source_pdf', and 'page_number') from both the new fact and the historical fact(s) to justify your decision.\n"
         "You MUST return ONLY a valid JSON object with EXACTLY these keys:\n"
         "- 'flagged' (boolean: true if there is a contradiction or likely contradiction, false otherwise)\n"
         "- 'is_corroborated' (boolean: true if at least one historical fact aligns with and supports the new fact, false if they are unrelated or contradict)\n"
-        "- 'reasoning' (string: explanation of your decision)."
+        "- 'reasoning' (string: detailed explanation of your decision including exact source quotes)."
     )
     
-    # We only need to provide the essential fields to save context and avoid distraction
     clean_history = []
     for f in retrieved_facts:
         clean_history.append({
             "topic": f.get("topic"),
             "fact": f.get("fact"),
-            "time_period": f.get("time_period")
+            "time_period": f.get("time_period"),
+            "source_quote": f.get("source_quote"),
+            "source_pdf": f.get("source_pdf"),
+            "page_number": f.get("page_number")
         })
 
     historical_facts_str = json.dumps(clean_history, indent=2)
     new_fact_str = json.dumps({
         "topic": new_fact.get("topic"),
         "fact": new_fact.get("fact"),
-        "time_period": new_fact.get("time_period")
+        "time_period": new_fact.get("time_period"),
+        "source_quote": new_fact.get("source_quote"),
+        "page_number": new_fact.get("page_number")
     }, indent=2)
 
     user_prompt = f"Historical Facts:\n{historical_facts_str}\n\nNew Fact:\n{new_fact_str}"
@@ -88,8 +93,9 @@ def reconcile_fact(client, model_name, new_fact, retrieved_facts, skeptic_reason
         "1. 'Corroborated': The facts actually align and agree, even if phrased differently. The Skeptic was wrong to flag it.\n"
         "2. 'Contradiction': There is a genuine mismatch and disagreement that cannot be explained.\n"
         "3. 'Reconciled by Context': The apparent contradiction is explained by a difference in time, scope, units, or context.\n\n"
+        "IMPORTANT: When explaining your verdict, especially for 'Contradiction' or 'Reconciled by Context', you MUST explicitly quote the exact source texts (using the provided 'source_quote', 'source_pdf', and 'page_number') from both the new fact and the historical fact(s) to justify where they contradict or how context resolves it.\n"
         "You MUST return ONLY a valid JSON object with EXACTLY these keys: "
-        "'status' (string: strictly one of 'Corroborated', 'Contradiction', 'Reconciled by Context') and 'reasoning' (string: explanation of your final verdict)."
+        "'status' (string: strictly one of 'Corroborated', 'Contradiction', 'Reconciled by Context') and 'reasoning' (string: detailed explanation of your final verdict including exact source quotes)."
     )
     
     clean_history = []
@@ -97,14 +103,19 @@ def reconcile_fact(client, model_name, new_fact, retrieved_facts, skeptic_reason
         clean_history.append({
             "topic": f.get("topic"),
             "fact": f.get("fact"),
-            "time_period": f.get("time_period")
+            "time_period": f.get("time_period"),
+            "source_quote": f.get("source_quote"),
+            "source_pdf": f.get("source_pdf"),
+            "page_number": f.get("page_number")
         })
 
     historical_facts_str = json.dumps(clean_history, indent=2)
     new_fact_str = json.dumps({
         "topic": new_fact.get("topic"),
         "fact": new_fact.get("fact"),
-        "time_period": new_fact.get("time_period")
+        "time_period": new_fact.get("time_period"),
+        "source_quote": new_fact.get("source_quote"),
+        "page_number": new_fact.get("page_number")
     }, indent=2)
 
     user_prompt = f"Historical Facts:\n{historical_facts_str}\n\nNew Fact:\n{new_fact_str}\n\nSkeptic's Reasoning for flagging:\n{skeptic_reasoning}"

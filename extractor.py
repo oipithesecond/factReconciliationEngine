@@ -15,6 +15,7 @@ class Fact(BaseModel):
     page_number: int = Field(description="The page number where the fact was found.")
 
 class FactList(BaseModel):
+    page_analysis: str = Field(description="A brief analysis of the page content, determining what is signal (important financial/business data) and what is noise to ignore.")
     facts: list[Fact]
 
 def extract_text_with_tables(page):
@@ -85,8 +86,10 @@ def extract_facts_from_chunk(client, chunk, model_name, max_retries=5):
         f"3. Do not extract trivial sentences. We only want impactful data points (e.g., revenue, GDP growth, strategic business changes, significant market shifts, operational metrics).\n"
         f"4. For each fact, you MUST provide the EXACT substring quote from the text.\n"
         f"5. The text is from page {chunk['page_number']}.\n\n"
-        f"You MUST return ONLY a valid JSON object with a single key 'facts' containing a list of objects. "
-        f"Each object must have exactly these keys: 'topic' (string), 'fact' (string), 'time_period' (string), 'source_quote' (string), and 'page_number' (integer).\n"
+        f"You MUST return ONLY a valid JSON object with exactly TWO keys:\n"
+        f"1. 'page_analysis' (string): A brief Chain-of-Thought analysis (under 50 words) deciding what is important signal to extract and what is noise to ignore.\n"
+        f"2. 'facts' (list): A list of objects containing the extracted facts.\n"
+        f"Each object in the 'facts' list must have exactly these keys: 'topic' (string), 'fact' (string), 'time_period' (string), 'source_quote' (string), and 'page_number' (integer).\n"
         f"IMPORTANT: Output the raw JSON immediately. Do NOT wrap the JSON in markdown blocks. Do NOT add any introductory or concluding text."
     )
     
@@ -166,7 +169,7 @@ if __name__ == "__main__":
         print("Error: Please set either OPENAI_API_KEY or GROQ_API_KEY in your .env file.")
         exit(1)
         
-    pdf_file = "sample.pdf" 
+    pdf_file = "01-delhivery-prospectus-2022-excerpt.pdf" 
     output_file = "extracted_facts.json"
 
     all_extracted_facts = []
