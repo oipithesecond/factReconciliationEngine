@@ -166,7 +166,7 @@ if __name__ == "__main__":
         print("Error: Please set either OPENAI_API_KEY or GROQ_API_KEY in your .env file.")
         exit(1)
         
-    pdf_file = "01-delhivery-prospectus-2022-excerpt.pdf" 
+    pdf_file = "sample.pdf" 
     output_file = "extracted_facts.json"
 
     all_extracted_facts = []
