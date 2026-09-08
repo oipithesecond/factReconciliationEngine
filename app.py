@@ -30,6 +30,19 @@ def save_dashboard_data(data):
     with open(DASHBOARD_DATA_FILE, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=4)
 
+def load_extracted_facts():
+    if os.path.exists("extracted_facts.json"):
+        try:
+            with open("extracted_facts.json", "r", encoding="utf-8") as f:
+                return json.load(f)
+        except Exception:
+            return []
+    return []
+
+def save_extracted_facts(data):
+    with open("extracted_facts.json", "w", encoding="utf-8") as f:
+        json.dump(data, f, indent=4)
+
 def get_client_and_model():
     if os.getenv("OPENAI_API_KEY"):
         client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
@@ -68,30 +81,30 @@ def render_fact_card(item):
             skeptic_part = parts[0].replace("Skeptic flagged:", "").strip()
             reconciler_part = parts[1].strip()
             
-            st.warning(f"** Skeptic Flagged:**\n\n{skeptic_part}")
+            st.warning(f"Skeptic Flagged:\n\n{skeptic_part}")
             
             if status == "Reconciled by Context":
-                st.success(f"** Reconciler Verdict (Reconciled by Context):**\n\n{reconciler_part}")
+                st.success(f"Reconciler Verdict (Reconciled by Context):\n\n{reconciler_part}")
             elif status == "Contradiction":
-                st.error(f"** Reconciler Verdict (Contradiction):**\n\n{reconciler_part}")
+                st.error(f"Reconciler Verdict (Contradiction):\n\n{reconciler_part}")
             else:
-                st.info(f"** Reconciler Verdict:**\n\n{reconciler_part}")
+                st.info(f"Reconciler Verdict:\n\n{reconciler_part}")
                 
         elif "Skeptic confirmed alignment:" in reasoning:
             skeptic_part = reasoning.replace("Skeptic confirmed alignment:", "").strip()
-            st.success(f"** Skeptic Confirmed Alignment:**\n\n{skeptic_part}")
+            st.success(f"Skeptic Confirmed Alignment:\n\n{skeptic_part}")
             
         elif "Skeptic found facts to be unrelated:" in reasoning:
             skeptic_part = reasoning.replace("Skeptic found facts to be unrelated:", "").strip()
-            st.info(f"** Skeptic Found Facts to be Unrelated:**\n\n{skeptic_part}")
+            st.info(f"Skeptic Found Facts to be Unrelated:\n\n{skeptic_part}")
             
         elif "Skeptic flagged issue:" in reasoning and "Reconciler failed:" in reasoning:
             parts = reasoning.split("| Reconciler failed:")
             skeptic_part = parts[0].replace("Skeptic flagged issue:", "").strip()
             reconciler_part = parts[1].strip()
             
-            st.warning(f"** Skeptic Flagged:**\n\n{skeptic_part}")
-            st.error(f"** Reconciler Failed:**\n\n{reconciler_part}")
+            st.warning(f"Skeptic Flagged:\n\n{skeptic_part}")
+            st.error(f" Reconciler Failed:\n\n{reconciler_part}")
             
         else:
             st.write(reasoning)
@@ -125,75 +138,77 @@ def main():
         if uploaded_files:
             if st.button("Process Documents"):
                 dashboard_data = load_dashboard_data()
+                raw_extracted_facts = load_extracted_facts()
+                log_box = st.empty()
+                log_text = ""
                 
-                with st.status("Starting document processing...", expanded=True) as status:
-                    for uploaded_file in uploaded_files:
-                        status.update(label=f"Processing {uploaded_file.name}...", state="running")
-                        
-                        import uuid
-                        # Save temp file with UUID to prevent concurrent tab collisions
-                        temp_pdf_path = f"temp_{uuid.uuid4().hex}_{uploaded_file.name}"
-                        with open(temp_pdf_path, "wb") as f:
-                            f.write(uploaded_file.getbuffer())
-                        
-                        try:
-                            st.write(f"Parsing and chunking {uploaded_file.name}...")
-                            chunks = parse_and_chunk_pdf(temp_pdf_path)
-                            
-                            if max_pages > 0:
-                                chunks = chunks[:max_pages]
-                                st.write(f" Chunked and limited to first {len(chunks)} pages for processing.")
-                            else:
-                                st.write(f" Chunked into {len(chunks)} pages.")
-                            
-                            for i, chunk in enumerate(chunks):
-                                st.write(f" Extracting facts from {uploaded_file.name} - Page {chunk['page_number']} ({i+1}/{len(chunks)})...")
-                                
-                                try:
-                                    extracted = extract_facts_from_chunk(client, chunk, model_name)
-                                    facts_list = extracted.get("facts", [])
-                                    
-                                    if facts_list:
-                                        st.write(f"Found {len(facts_list)} facts on page {chunk['page_number']}. Reconciling...")
-                                        for fact in facts_list:
-                                            st.write(f"&nbsp;&nbsp;&nbsp;&nbsp; Skepticising & Reconciling: '{fact.get('topic')}'...")
-                                            agent_result = process_fact_with_agents(client, model_name, fact, memory)
-                                            
-                                            st.write(f"&nbsp;&nbsp;&nbsp;&nbsp; Storing to DB: '{fact.get('topic')}' -> **{agent_result.get('status')}**")
-                                            
-                                            # Save to dashboard
-                                            dashboard_record = {
-                                                "fact": fact,
-                                                "source_pdf": uploaded_file.name,
-                                                "status": agent_result.get("status"),
-                                                "reasoning": agent_result.get("reasoning"),
-                                                "retrieved_facts": agent_result.get("retrieved_facts", [])
-                                            }
-                                            dashboard_data.append(dashboard_record)
-                                            save_dashboard_data(dashboard_data)
-                                            
-                                            # Store fact in memory for future comparisons
-                                            memory.store_facts([fact], source_pdf=uploaded_file.name)
-                                            
-                                            # Dynamic delay based on user input
-                                            if delay_seconds > 0:
-                                                time.sleep(delay_seconds) 
-                                    else:
-                                        st.write(f" No facts found on page {chunk['page_number']}.")
-                                        
-                                    # Extra small delay between pages
-                                    if delay_seconds > 0:
-                                        time.sleep(max(1.0, delay_seconds))
-
-                                        
-                                except Exception as e:
-                                    st.error(f" Error extracting from page {chunk['page_number']}: {e}")
-                                    
-                        finally:
-                            if os.path.exists(temp_pdf_path):
-                                os.remove(temp_pdf_path)
+                def log_update(msg):
+                    nonlocal log_text
+                    log_text += msg + "\n"
+                    log_box.code(log_text, language="text")
+                
+                for uploaded_file in uploaded_files:
+                    import uuid
+                    temp_pdf_path = f"temp_{uuid.uuid4().hex}_{uploaded_file.name}"
+                    with open(temp_pdf_path, "wb") as f:
+                        f.write(uploaded_file.getbuffer())
                     
-                    status.update(label="All documents processed successfully!", state="complete", expanded=False)
+                    try:
+                        log_update(f"Parsing and chunking {uploaded_file.name}...")
+                        chunks = parse_and_chunk_pdf(temp_pdf_path)
+                        
+                        if max_pages > 0:
+                            chunks = chunks[:max_pages]
+                            log_update(f"Successfully chunked and limited to first {len(chunks)} pages.")
+                        else:
+                            log_update(f"Successfully chunked into {len(chunks)} pages.")
+                        
+                        for i, chunk in enumerate(chunks):
+                            log_update(f"Analyzing page {chunk['page_number']}...")
+                            
+                            try:
+                                extracted = extract_facts_from_chunk(client, chunk, model_name)
+                                facts_list = extracted.get("facts", [])
+                                
+                                if facts_list:
+                                    # Update raw extracted facts immediately
+                                    raw_extracted_facts.extend(facts_list)
+                                    save_extracted_facts(raw_extracted_facts)
+                                    
+                                    for fact_idx, fact in enumerate(facts_list):
+                                        agent_result = process_fact_with_agents(client, model_name, fact, memory)
+                                        
+                                        # Save to dashboard
+                                        dashboard_record = {
+                                            "fact": fact,
+                                            "source_pdf": uploaded_file.name,
+                                            "status": agent_result.get("status"),
+                                            "reasoning": agent_result.get("reasoning"),
+                                            "retrieved_facts": agent_result.get("retrieved_facts", [])
+                                        }
+                                        dashboard_data.append(dashboard_record)
+                                        save_dashboard_data(dashboard_data)
+                                        
+                                        # Store fact in memory for future comparisons
+                                        memory.store_facts([fact], source_pdf=uploaded_file.name)
+                                        log_update(f"Stored 1 facts from {uploaded_file.name} into memory.")
+                                        
+                                        if delay_seconds > 0:
+                                            time.sleep(delay_seconds) 
+                                else:
+                                    log_update(f"No facts found on page {chunk['page_number']}.")
+                                    
+                                if delay_seconds > 0:
+                                    time.sleep(max(1.0, delay_seconds))
+                                    
+                            except Exception as e:
+                                st.error(f"Error extracting from page {chunk['page_number']}: {e}")
+                                
+                    finally:
+                        if os.path.exists(temp_pdf_path):
+                            os.remove(temp_pdf_path)
+                
+                log_update("All documents processed successfully!")
                 st.success("Processing complete! Check the Knowledge Dashboard.")
 
     with tab2:

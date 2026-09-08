@@ -1,7 +1,171 @@
 [
     {
         "fact": {
-            "topic": "India GDP growth",
+            "topic": "Global Manufacturing Slowdown",
+            "fact": "A notable trend was the slowdown in global manufacturing, especially in Europe and parts of Asia, due to supply chain disruptions and weak external demand.",
+            "time_period": "2024",
+            "source_quote": "A notable trend was the slowdown in global manufacturing, especially in Europe and parts of Asia, due to supply chain disruptions and weak external demand.",
+            "page_number": 4
+        },
+        "source_pdf": "01-india-economic-survey-2024-25-excerpt.pdf",
+        "status": "Corroborated",
+        "reasoning": "Skeptic confirmed alignment: - The historical fact states: \"By July 2024, weaker conditions pushed the PMI back into contraction.\" This indicates a slowdown in global manufacturing activity during 2024.\n- The new fact describes: \"A notable trend was the slowdown in global manufacturing, especially in Europe and parts of Asia, due to supply chain disruptions and weak external demand.\" This aligns with the contraction noted in the PMI data and does not conflict with any other historical fact provided.\n- No historical fact presents a contradictory claim about global manufacturing expanding or improving in 2024, so there is no contradiction.\n- Therefore, the new fact is corroborated by the existing historical information about manufacturing contraction.",
+        "retrieved_facts": [
+            {
+                "fact": "Weaker conditions pushed the PMI back into contraction",
+                "source_quote": "By July 2024, weaker conditions pushed the PMI back into contraction.",
+                "topic": "Global Manufacturing PMI",
+                "source_pdf": "01-india-economic-survey-2024-25-excerpt.pdf",
+                "page_number": 7,
+                "time_period": "July 2024",
+                "distance": 0.4074379801750183
+            },
+            {
+                "fact": "By July 2024, weaker conditions pushed the PMI back into contraction.",
+                "source_pdf": "01-india-economic-survey-2024-25-excerpt.pdf",
+                "time_period": "July 2024",
+                "topic": "Global manufacturing PMI - contraction",
+                "source_quote": "By July 2024, weaker conditions pushed the PMI back into contraction.",
+                "page_number": 7,
+                "distance": 0.4460141658782959
+            },
+            {
+                "topic": "Global Economic Growth",
+                "page_number": 7,
+                "fact": "Global growth was 3.3% in 2024, down from 3.5% in 2023 and below the 2000-19 historical average of 3.7%.",
+                "source_quote": "global growth at 3.3 per cent in 2024 (3.5 per cent a year ago) was below the historical average (2000-19) of 3.7 per cent",
+                "source_pdf": "02-rbi-annual-report-2024-25-excerpt.pdf",
+                "time_period": "2024",
+                "distance": 0.4814443588256836
+            }
+        ]
+    },
+    {
+        "fact": {
+            "topic": "Services Sector Performance",
+            "fact": "The services sector performed better, supporting growth in many economies.",
+            "time_period": "2024",
+            "source_quote": "In contrast, the services sector performed better, supporting growth in many economies.",
+            "page_number": 4
+        },
+        "source_pdf": "01-india-economic-survey-2024-25-excerpt.pdf",
+        "status": "Corroborated",
+        "reasoning": "Skeptic confirmed alignment: - The historical data consistently describe robust growth in the services sector: \"Growth in the services sector is expected to remain robust at 7.2 per cent...\" (Economic Survey FY25, p.15);\n- It also notes a 7.1% growth in the first half of FY25 (p.19) and a 7.5% growth for 2024\u201125 with a 64.1% share in GVA (RBI Annual Report, p.9). These statements indicate that the services sector was indeed performing strongly during the relevant period. \n- The new fact states: \"In contrast, the services sector performed better, supporting growth in many economies.\" (page 4). This qualitative claim aligns with the quantitative evidence of strong growth and does not conflict with any of the historical facts. Therefore, there is no contradiction, and the historical facts corroborate the new statement.",
+        "retrieved_facts": [
+            {
+                "time_period": "FY25",
+                "fact": "Growth in the services sector is expected to remain robust at 7.2 per cent",
+                "source_quote": "Growth in the services sector is expected to remain robust at 7.2 per cent, driven by healthy activity in financial, real estate, professional services, public administration, defence, and other services.",
+                "topic": "Services sector growth",
+                "page_number": 15,
+                "source_pdf": "01-india-economic-survey-2024-25-excerpt.pdf",
+                "distance": 0.22687089443206787
+            },
+            {
+                "topic": "Services Sector Growth",
+                "fact": "The services sector achieved 7.1% growth in the first half of FY25 (H1 FY25)",
+                "time_period": "H1 FY25",
+                "source_quote": "A notable growth in Q1 and Q2 resulted in 7.1 per cent growth in H1 FY25.",
+                "page_number": 19,
+                "source_pdf": "01-india-economic-survey-2024-25-excerpt.pdf",
+                "distance": 0.2666241526603699
+            },
+            {
+                "source_quote": "I.12 The services sector, with a share of 64.1 per cent in GVA, remained the mainstay of aggregate supply with a growth of 7.5 per cent in 2024-25.",
+                "page_number": 9,
+                "source_pdf": "02-rbi-annual-report-2024-25-excerpt.pdf",
+                "topic": "Services Sector Share and Growth",
+                "time_period": "2024-25",
+                "fact": "services sector share of 64.1 per cent in GVA and grew 7.5 per cent in 2024-25",
+                "distance": 0.38076215982437134
+            }
+        ]
+    },
+    {
+        "fact": {
+            "topic": "Inflation Trends",
+            "fact": "Inflationary pressures eased in most economies, however services inflation has remained persistent.",
+            "time_period": "2024",
+            "source_quote": "Inflationary pressures eased in most economies. However, services inflation has remained persistent.",
+            "page_number": 4
+        },
+        "source_pdf": "01-india-economic-survey-2024-25-excerpt.pdf",
+        "status": "Corroborated",
+        "reasoning": "Skeptic confirmed alignment: - According to the RBI annual report excerpt (page 6): \"Inflation eased and moved below the target by the end of the year\".\n- The same report (page 7) states: \"Global inflation eased to 5.7 per cent in 2024 from 6.6 per cent in 2023\".\n- The new fact says: \"Inflationary pressures eased in most economies. However, services inflation has remained persistent.\" \nThese statements are consistent: both the historical facts and the new fact acknowledge that overall inflation eased in 2024. The new fact adds a detail about services inflation staying high, which does not conflict with the earlier statements. Therefore, there is no contradiction, and the new fact is corroborated by the historical data.",
+        "retrieved_facts": [
+            {
+                "page_number": 6,
+                "source_quote": "Inflation eased and moved below the target by the end of the year",
+                "fact": "Inflation eased and moved below the target by the end of the year",
+                "source_pdf": "02-rbi-annual-report-2024-25-excerpt.pdf",
+                "time_period": "2024-2025",
+                "topic": "Inflation",
+                "distance": 0.3770367503166199
+            },
+            {
+                "page_number": 14,
+                "time_period": "near term",
+                "fact": "Authorities expect benign inflation dynamics to persist",
+                "source_pdf": "03-imf-india-2025-article-iv-excerpt.pdf",
+                "source_quote": "Like staff, the authorities expected benign inflation dynamics to persist",
+                "topic": "Inflation outlook",
+                "distance": 0.39155685901641846
+            },
+            {
+                "source_pdf": "02-rbi-annual-report-2024-25-excerpt.pdf",
+                "fact": "Global inflation eased to 5.7% in 2024 from 6.6% in 2023.",
+                "page_number": 7,
+                "time_period": "2024",
+                "source_quote": "Global inflation eased to 5.7 per cent in 2024 from 6.6 per cent in 2023",
+                "topic": "Global Inflation",
+                "distance": 0.44149041175842285
+            }
+        ]
+    },
+    {
+        "fact": {
+            "topic": "Commodity Prices",
+            "fact": "Commodity prices have stabilised, but the risk of synchronised price increases persists.",
+            "time_period": "2024",
+            "source_quote": "Although commodity prices have stabilised, the risk of synchronised price increases persists.",
+            "page_number": 4
+        },
+        "source_pdf": "01-india-economic-survey-2024-25-excerpt.pdf",
+        "status": "New Fact",
+        "reasoning": "Skeptic found facts to be unrelated: - The historical commodity price forecast states: \"Energy 200 Agriculture 180 Metals & Minerals 160\" for 2024, which provides projected index levels but does not comment on price stability or synchronization risk. \n- The new fact says: \"Although commodity prices have stabilised, the risk of synchronised price increases persists.\" This statement does not conflict with the numeric forecast; it simply adds a qualitative assessment.\n- The other historical facts concern trade risk and monetary policy and are unrelated to commodity price stability.\n- Because there is no direct disagreement and no historical fact that explicitly supports the new qualitative claim, the new fact is neither contradictory nor corroborated.",
+        "retrieved_facts": [
+            {
+                "page_number": 11,
+                "source_pdf": "01-india-economic-survey-2024-25-excerpt.pdf",
+                "fact": "Total Commodity Index projected values for 2024: Energy 200, Agriculture 180, Metals & Minerals 160.",
+                "source_quote": "Energy 200 Agriculture 180 Metals & Minerals 160",
+                "topic": "Commodity Prices Forecast",
+                "time_period": "2024 (forecast)",
+                "distance": 0.5037175416946411
+            },
+            {
+                "page_number": 14,
+                "topic": "Near-term trade risk",
+                "fact": "Further escalation of trade tensions could lead to tighter financial conditions, higher input costs, and lower trade, FDI, and economic growth",
+                "source_quote": "On the downside, further escalation of trade tensions and deepening of geoeconomic fragmentation could lead to tighter financial conditions, higher input costs, and lower trade, FDI, and economic growth",
+                "time_period": "near term",
+                "source_pdf": "03-imf-india-2025-article-iv-excerpt.pdf",
+                "distance": 0.5530660152435303
+            },
+            {
+                "time_period": "present",
+                "source_pdf": "03-imf-india-2025-article-iv-excerpt.pdf",
+                "fact": "If tariffs persist at current levels, there would likely be scope for further monetary easing amid benign inflation dynamics.",
+                "page_number": 4,
+                "source_quote": "if tariffs persist at current levels, there would likely be scope for further monetary easing amid benign inflation dynamics.",
+                "topic": "Monetary Policy Outlook",
+                "distance": 0.5597188472747803
+            }
+        ]
+    },
+    {
+        "fact": {
+            "topic": "India GDP Growth FY25",
             "fact": "India\u2019s real GDP is estimated to grow by 6.4 per cent in FY25.",
             "time_period": "FY25",
             "source_quote": "India\u2019s real GDP is estimated to grow by 6.4 per cent in FY25.",
@@ -9,34 +173,239 @@
         },
         "source_pdf": "01-india-economic-survey-2024-25-excerpt.pdf",
         "status": "Corroborated",
-        "reasoning": "Skeptic confirmed alignment: The new fact states: \"India\u2019s real GDP is estimated to grow by 6.4 per cent in FY25.\" (source_quote, page_number 4). This matches exactly the first historical fact, which also says \"India\u2019s real GDP is estimated to grow by 6.4 per cent in FY25.\" (source_quote, page_number 4). Therefore there is no contradiction; the new fact is directly corroborated by that historical entry. The second historical fact gives a slightly different estimate (6.5%) for the same period, but this represents a different source\u2019s estimate rather than a mutually exclusive reality, and does not negate the 6.4% estimate. Consequently, the new fact is not contradictory and is supported by at least one historical fact.",
+        "reasoning": "Skeptic confirmed alignment: - The new fact states: \"India\u2019s real GDP is estimated to grow by 6.4 per cent in FY25.\" \n- This matches exactly the first historical fact: \"India\u2019s real GDP is estimated to grow by 6.4 per cent in FY25.\" (FY25, source page 4).\n- It also matches the second historical fact, which repeats the same statement for FY25.\n- Since the new fact aligns perfectly with these historical entries and there is no conflicting information about FY25 GDP growth, there is no contradiction. The new fact is therefore corroborated by the historical data.",
         "retrieved_facts": [
             {
                 "source_quote": "India\u2019s real GDP is estimated to grow by 6.4 per cent in FY25.",
                 "page_number": 4,
+                "time_period": "FY25",
+                "source_pdf": "01-india-economic-survey-2024-25-excerpt.pdf",
                 "topic": "India GDP growth FY25",
+                "fact": "India\u2019s real GDP is estimated to grow by 6.4 per cent in FY25.",
+                "distance": 0.011812925338745117
+            },
+            {
+                "topic": "India GDP growth",
+                "source_quote": "India\u2019s real GDP is estimated to grow by 6.4 per cent in FY25.",
+                "page_number": 4,
+                "fact": "India\u2019s real GDP is estimated to grow by 6.4 per cent in FY25.",
                 "source_pdf": "01-india-economic-survey-2024-25-excerpt.pdf",
                 "time_period": "FY25",
-                "fact": "India\u2019s real GDP is estimated to grow by 6.4 per cent in FY25.",
-                "distance": 0.02794891595840454
+                "distance": 0.01740485429763794
+            },
+            {
+                "fact": "Real GDP is projected to grow at 6.6 percent in FY2025/26",
+                "page_number": 3,
+                "source_pdf": "03-imf-india-2025-article-iv-excerpt.pdf",
+                "time_period": "FY2025/26",
+                "source_quote": "real GDP is projected to grow at 6.6 percent in FY2025/26",
+                "topic": "Projected India GDP growth FY2025/26",
+                "distance": 0.09463095664978027
+            }
+        ]
+    },
+    {
+        "fact": {
+            "topic": "Rural Demand and Agriculture",
+            "fact": "Rural demand improved on the back of record Kharif production and favourable agricultural conditions.",
+            "time_period": "First half FY25",
+            "source_quote": "Growth in the first half of FY25 was supported by agriculture and services, with rural demand improving on the back of record Kharif production and favourable agricultural conditions.",
+            "page_number": 4
+        },
+        "source_pdf": "01-india-economic-survey-2024-25-excerpt.pdf",
+        "status": "Corroborated",
+        "reasoning": "Skeptic confirmed alignment: - The historical data state that \"total Kharif food grain production is estimated at a record 1647.05 lakh metric tonnes (LMT)\" (01\u2011india\u2011economic\u2011survey\u20112024\u201125\u2011excerpt.pdf, p.\u202f17) and that this production is \"8.2 per cent higher than the average food grain production in the past five years\" (same source, p.\u202f17). \n- Another source notes overall agricultural output for 2024\u201125 (kharif and rabi) at \"3,309.2 lakh tonne, 4.8 per cent higher than the final estimates of 2023\u201124\" (02\u2011rbi\u2011annual\u2011report\u20112024\u201125\u2011excerpt.pdf, p.\u202f27). \n- The new fact says \"Growth in the first half of FY25 was supported by agriculture and services, with rural demand improving on the back of record Kharif production and favourable agricultural conditions\" (page\u202f4). \n- The claim of \"record Kharif production\" in the new fact directly aligns with the historical statement that Kharif production is at a record level. There is no inconsistency in the figures or time periods; both refer to FY\u202f2024\u201125. Therefore, the new fact does not contradict any historical fact and is corroborated by them.",
+        "retrieved_facts": [
+            {
+                "fact": "The estimated Kharif production is 8.2 percent higher than the average food grain production over the past five years",
+                "topic": "Kharif production relative to five\u2011year average",
+                "source_pdf": "01-india-economic-survey-2024-25-excerpt.pdf",
+                "time_period": "FY 2024-25 vs past five years",
+                "source_quote": "8.2 per cent higher than the average food grain production in the past five years",
+                "page_number": 17,
+                "distance": 0.3573579788208008
+            },
+            {
+                "time_period": "FY 2024-25",
+                "page_number": 17,
+                "topic": "Kharif food grain production estimate",
+                "source_pdf": "01-india-economic-survey-2024-25-excerpt.pdf",
+                "source_quote": "total Kharif food grain production is estimated at a record 1647.05 lakh metric tonnes (LMT)",
+                "fact": "Total Kharif food grain production for 2024-25 is estimated at 1647.05 lakh metric tonnes",
+                "distance": 0.3793444037437439
+            },
+            {
+                "fact": "3,309.2 lakh tonnes, 4.8 percent higher than 2023-24 final estimates",
+                "topic": "Agricultural Crop Production (kharif and rabi)",
+                "source_pdf": "02-rbi-annual-report-2024-25-excerpt.pdf",
+                "page_number": 27,
+                "source_quote": "production during 2024-25 (kharif and rabi) at 3,309.2 lakh tonne, 4.8 per cent higher than the final estimates of 2023-24",
+                "time_period": "2024-25",
+                "distance": 0.39824962615966797
+            }
+        ]
+    },
+    {
+        "fact": {
+            "topic": "India Manufacturing Pressures",
+            "fact": "The manufacturing sector faced pressures due to weak global demand and domestic seasonal conditions.",
+            "time_period": "First half FY25",
+            "source_quote": "The manufacturing sector faced pressures due to weak global demand and domestic seasonal conditions.",
+            "page_number": 4
+        },
+        "source_pdf": "01-india-economic-survey-2024-25-excerpt.pdf",
+        "status": "Corroborated",
+        "reasoning": "Skeptic confirmed alignment: - The new fact states: \"The manufacturing sector faced pressures due to weak global demand and domestic seasonal conditions.\" (First half FY25)\n- A historical fact notes: \"By July 2024, weaker conditions pushed the PMI back into contraction.\" (July 2024)\nThese two statements describe the same period (mid\u20112024) and both attribute manufacturing weakness to adverse external conditions, so they are consistent rather than contradictory. The positive outlook for 2025\u201126 and the National Manufacturing Mission pertain to a later fiscal year and do not conflict with the short\u2011term pressures described in the new fact.",
+        "retrieved_facts": [
+            {
+                "time_period": "2025-26",
+                "source_pdf": "02-rbi-annual-report-2024-25-excerpt.pdf",
+                "source_quote": "manufacturing sector is expected to gain further traction in 2025-26 supported by improvement in domestic demand, higher capacity utilisation, healthy balance sheets of corporates and banks, and consumer and business optimism",
+                "fact": "Manufacturing sector expected to gain further traction supported by domestic demand, higher capacity utilisation, healthy balance sheets and consumer optimism",
+                "page_number": 16,
+                "topic": "Manufacturing Sector Outlook",
+                "distance": 0.45726335048675537
             },
             {
                 "source_pdf": "02-rbi-annual-report-2024-25-excerpt.pdf",
-                "source_quote": "real gross domestic product (GDP) growth moderated to 6.5 per cent4 in 2024-25",
-                "page_number": 22,
-                "fact": "6.5 percent",
-                "time_period": "2024-25",
-                "topic": "India Real GDP Growth (FY)",
-                "distance": 0.10725873708724976
+                "fact": "Announced in Union Budget 2025-26 to further strengthen \u2018Make in India\u2019 initiative",
+                "page_number": 16,
+                "source_quote": "National Manufacturing Mission announced in the Union Budget 2025-26 is expected to further strengthen \u2018Make in India\u2019 initiative",
+                "topic": "National Manufacturing Mission",
+                "time_period": "2025-26",
+                "distance": 0.46609216928482056
             },
             {
-                "topic": "Projected India GDP growth FY2025/26",
-                "time_period": "FY2025/26",
-                "fact": "Real GDP is projected to grow at 6.6 percent in FY2025/26",
+                "source_quote": "By July 2024, weaker conditions pushed the PMI back into contraction.",
+                "page_number": 7,
+                "topic": "Global Manufacturing PMI",
+                "fact": "Weaker conditions pushed the PMI back into contraction",
+                "time_period": "July 2024",
+                "source_pdf": "01-india-economic-survey-2024-25-excerpt.pdf",
+                "distance": 0.4770316481590271
+            }
+        ]
+    },
+    {
+        "fact": {
+            "topic": "Private Consumption Stability",
+            "fact": "Private consumption remained stable, reflecting steady domestic demand.",
+            "time_period": "First half FY25",
+            "source_quote": "Private consumption remained stable, reflecting steady domestic demand.",
+            "page_number": 4
+        },
+        "source_pdf": "01-india-economic-survey-2024-25-excerpt.pdf",
+        "status": "New Fact",
+        "reasoning": "Skeptic found facts to be unrelated: - Historical fact (FY2024/25): \"Private consumption growth was buoyant at 7.2 percent on increasing rural demand and stable urban demand.\" (source: 03-imf-india-2025-article-iv-excerpt.pdf, p.10)\n- Historical fact (FY25): \"private final consumption expenditure at constant prices is estimated to grow by 7.3 per cent\" (source: 01-india-economic-survey-2024-25-excerpt.pdf, p.14)\n- New fact (First half FY25): \"Private consumption remained stable, reflecting steady domestic demand.\" (source: page 4)\n\nThe new fact describes consumption behavior in the **first half of FY25**, whereas the historical facts describe **full\u2011year** performance for FY2024/25 and FY25, indicating strong growth of around 7\u202f%. Because the time frames differ, the statements do not directly conflict about the same period. The new fact\u2019s claim of \u201cstable\u201d consumption does not contradict the later\u2011year growth figures; it could simply reflect a short\u2011term plateau before the annual increase. Therefore, there is no contradiction, and the new fact is not directly corroborated by the historical data.\n",
+        "retrieved_facts": [
+            {
+                "time_period": "FY2024/25",
+                "page_number": 10,
                 "source_pdf": "03-imf-india-2025-article-iv-excerpt.pdf",
-                "source_quote": "real GDP is projected to grow at 6.6 percent in FY2025/26",
-                "page_number": 3,
-                "distance": 0.10786283016204834
+                "source_quote": "Private consumption growth was buoyant at 7.2 percent on increasing rural demand and stable urban demand.",
+                "fact": "Private consumption growth was buoyant at 7.2 percent on increasing rural demand and stable urban demand.",
+                "topic": "Private Consumption",
+                "distance": 0.2553088665008545
+            },
+            {
+                "source_quote": "Private consumption growth was buoyant at 7.2 percent on increasing rural demand and stable urban demand.",
+                "time_period": "FY2024/25",
+                "source_pdf": "03-imf-india-2025-article-iv-excerpt.pdf",
+                "fact": "Private consumption growth was buoyant at 7.2 percent on increasing rural demand and stable urban demand.",
+                "page_number": 10,
+                "topic": "Private consumption growth",
+                "distance": 0.2677040100097656
+            },
+            {
+                "fact": "Private final consumption expenditure at constant prices is estimated to grow by 7.3%",
+                "page_number": 14,
+                "source_quote": "private final consumption expenditure at constant prices is estimated to grow by 7.3 per cent",
+                "source_pdf": "01-india-economic-survey-2024-25-excerpt.pdf",
+                "time_period": "FY25",
+                "topic": "Private consumption growth",
+                "distance": 0.3252629041671753
+            }
+        ]
+    },
+    {
+        "fact": {
+            "topic": "Fiscal Discipline and External Balance",
+            "fact": "Fiscal discipline and a strong external balance, supported by a services trade surplus and healthy remittance growth, contributed to macroeconomic stability.",
+            "time_period": "FY25",
+            "source_quote": "Fiscal discipline and strong external balance supported by a services trade surplus and healthy remittance growth contributed to macroeconomic stability.",
+            "page_number": 4
+        },
+        "source_pdf": "01-india-economic-survey-2024-25-excerpt.pdf",
+        "status": "New Fact",
+        "reasoning": "Skeptic found facts to be unrelated: - Historical Fact: \"Fiscal balance under authorities' definition -6.7\" (2021/22) \u2013 this provides a numeric fiscal balance but does not address the qualitative claim about fiscal discipline and external balance in FY25.\n- Historical Fact: \"Central government overall balance -6.7\" (2021/22) \u2013 similarly a numeric figure, unrelated to the statement about services trade surplus or remittance growth.\n- Historical Fact: \"State-level fiscal deficits are expected to return to about 3 percent of GDP on aggregate in FY2025/26.\" \u2013 this projects a state\u2011level deficit figure but does not mention fiscal discipline, external balance, or macro\u2011economic stability.\n- New Fact: \"Fiscal discipline and strong external balance supported by a services trade surplus and healthy remittance growth contributed to macroeconomic stability.\" (FY25) \u2013 a qualitative assessment with no numeric values that conflict with the historical numbers.\nSince none of the historical facts present a contradictory metric or mutually exclusive reality, there is no contradiction. Moreover, the historical facts do not directly support the qualitative claim about fiscal discipline and external balance, so they are not corroborating evidence.\nTherefore, the new fact is neither contradicted nor corroborated by the provided historical facts.",
+        "retrieved_facts": [
+            {
+                "source_quote": "Fiscal balance under authorities' definition -6.7",
+                "fact": "Fiscal balance was -6.7% of GDP in 2021/22",
+                "topic": "Fiscal balance under authorities' definition",
+                "source_pdf": "03-imf-india-2025-article-iv-excerpt.pdf",
+                "time_period": "2021/22",
+                "page_number": 5,
+                "distance": 0.3465314507484436
+            },
+            {
+                "fact": "-6.7",
+                "source_quote": "Central government overall balance -6.7",
+                "time_period": "2021/22",
+                "page_number": 5,
+                "topic": "Central government overall fiscal balance (% of GDP)",
+                "source_pdf": "03-imf-india-2025-article-iv-excerpt.pdf",
+                "distance": 0.42181122303009033
+            },
+            {
+                "source_pdf": "03-imf-india-2025-article-iv-excerpt.pdf",
+                "time_period": "FY2025/26",
+                "topic": "State-level Fiscal Deficits",
+                "fact": "State-level fiscal deficits are expected to return to about 3% of GDP on aggregate",
+                "source_quote": "State-level fiscal deficits are expected to return to about 3 percent of GDP on aggregate in FY2025/26.",
+                "page_number": 15,
+                "distance": 0.4316660165786743
+            }
+        ]
+    },
+    {
+        "fact": {
+            "topic": "FY26 Growth Headwinds",
+            "fact": "Headwinds to growth for FY26 include elevated geopolitical and trade uncertainties and possible commodity price shocks.",
+            "time_period": "FY26",
+            "source_quote": "Headwinds to growth include elevated geopolitical and trade uncertainties and possible commodity price shocks.",
+            "page_number": 4
+        },
+        "source_pdf": "01-india-economic-survey-2024-25-excerpt.pdf",
+        "status": "Corroborated",
+        "reasoning": "Skeptic confirmed alignment: - The IMF excerpt notes a \"Growth is expected to decline to 6.2 percent in FY2026/27\" (FY2026/27 projection). This implies that growth will face challenges in FY26, which is consistent with the new fact\u2019s mention of headwinds.\n- The same IMF document warns that \"further escalation of trade tensions and deepening of geoeconomic fragmentation could lead to tighter financial conditions, higher input costs, and lower trade, FDI, and economic growth\" (near\u2011term trade risk). This directly supports the new fact\u2019s claim of \"elevated geopolitical and trade uncertainties\" as a headwind for FY26.\n- No historical fact states that there will be no trade or geopolitical risks, nor does any fact give a contradictory growth projection for FY26. Therefore, the new fact does not contradict any historical fact; it aligns with the existing information about trade risks and projected slower growth.\n\nConclusion: There is no contradiction, and the new fact is corroborated by the historical facts.",
+        "retrieved_facts": [
+            {
+                "source_quote": "Growth is expected to decline to 6.2 percent in FY2026/27",
+                "page_number": 13,
+                "fact": "Growth is expected to decline to 6.2 percent in FY2026/27",
+                "source_pdf": "03-imf-india-2025-article-iv-excerpt.pdf",
+                "time_period": "FY2026/27",
+                "topic": "GDP Growth Projection",
+                "distance": 0.47460800409317017
+            },
+            {
+                "topic": "Exports Growth",
+                "time_period": "H1 FY25",
+                "fact": "Exports of goods and non\u2011factor services at constant prices rose 5.6 per cent in H1 FY25.",
+                "page_number": 22,
+                "source_quote": "exports of goods and non-factor services at constant prices increased by 5.6 per cent in H1 FY25",
+                "source_pdf": "01-india-economic-survey-2024-25-excerpt.pdf",
+                "distance": 0.4786028265953064
+            },
+            {
+                "topic": "Near-term trade risk",
+                "page_number": 14,
+                "source_pdf": "03-imf-india-2025-article-iv-excerpt.pdf",
+                "time_period": "near term",
+                "fact": "Further escalation of trade tensions could lead to tighter financial conditions, higher input costs, and lower trade, FDI, and economic growth",
+                "source_quote": "On the downside, further escalation of trade tensions and deepening of geoeconomic fragmentation could lead to tighter financial conditions, higher input costs, and lower trade, FDI, and economic growth",
+                "distance": 0.48952364921569824
             }
         ]
     },
@@ -50,34 +419,34 @@
         },
         "source_pdf": "01-india-economic-survey-2024-25-excerpt.pdf",
         "status": "Corroborated",
-        "reasoning": "Skeptic confirmed alignment: The new fact states: \"The global economy grew by 3.3 per cent in 2023.\" (source_quote from the new fact). This exactly matches the first historical fact, which also says: \"The global economy grew by 3.3 per cent in 2023.\" (source_quote from the historical fact, source_pdf \"01-india-economic-survey-2024-25-excerpt.pdf\", page 5). Both refer to the same metric (global GDP growth), the same year (2023), and provide identical wording, indicating agreement rather than contradiction. Therefore, there is no conflict, and the new fact is corroborated by the historical record.",
+        "reasoning": "Skeptic confirmed alignment: - Historical Fact (2023) from the India Economic Survey excerpt: \"The global economy grew by 3.3 per cent in 2023.\"\n- Historical Fact (2023) from the same source (duplicate entry): \"The global economy grew by 3.3 per cent in 2023.\"\n- The New Fact states: \"The global economy grew by 3.3 per cent in 2023.\"\n\nThese statements are identical and refer to the same metric (global GDP growth) and the same year (2023). Therefore, the new fact is fully supported by the historical facts. The third historical entry concerns 2024 and does not conflict with the 2023 data, so there is no contradiction.",
         "retrieved_facts": [
             {
-                "fact": "The global economy grew by 3.3 per cent in 2023.",
-                "source_pdf": "01-india-economic-survey-2024-25-excerpt.pdf",
                 "source_quote": "The global economy grew by 3.3 per cent in 2023.",
-                "topic": "Global economic growth 2023",
-                "time_period": "2023",
                 "page_number": 5,
+                "source_pdf": "01-india-economic-survey-2024-25-excerpt.pdf",
+                "topic": "Global GDP growth (2023)",
+                "fact": "The global economy grew by 3.3 per cent in 2023.",
+                "time_period": "2023",
+                "distance": 0.012898564338684082
+            },
+            {
+                "source_pdf": "01-india-economic-survey-2024-25-excerpt.pdf",
+                "fact": "The global economy grew by 3.3 per cent in 2023.",
+                "topic": "Global economic growth 2023",
+                "page_number": 5,
+                "time_period": "2023",
+                "source_quote": "The global economy grew by 3.3 per cent in 2023.",
                 "distance": 0.05188751220703125
             },
             {
+                "topic": "Global Economic Growth - 2024",
+                "source_quote": "growth of 3.3 per cent in 2024",
                 "source_pdf": "02-rbi-annual-report-2024-25-excerpt.pdf",
-                "source_quote": "global growth at 3.3 per cent in 2024 (3.5 per cent a year ago) was below the historical average (2000-19) of 3.7 per cent",
-                "page_number": 7,
-                "fact": "Global growth was 3.3% in 2024, down from 3.5% in 2023 and below the 2000-19 historical average of 3.7%.",
                 "time_period": "2024",
-                "topic": "Global Economic Growth",
-                "distance": 0.11520862579345703
-            },
-            {
-                "time_period": "2025-2026",
-                "topic": "Global Economic Growth",
-                "source_quote": "The global economy is projected to grow by 2.8 per cent in 2025 and 3.0 per cent in 2026 (3.3 per cent in 2024).",
-                "page_number": 15,
-                "fact": "Growth of 2.8% in 2025, 3.0% in 2026 (3.3% in 2024)",
-                "source_pdf": "02-rbi-annual-report-2024-25-excerpt.pdf",
-                "distance": 0.14646977186203003
+                "page_number": 6,
+                "fact": "Global economy grew 3.3 percent in 2024.",
+                "distance": 0.1087028980255127
             }
         ]
     },
@@ -91,34 +460,34 @@
         },
         "source_pdf": "01-india-economic-survey-2024-25-excerpt.pdf",
         "status": "Corroborated",
-        "reasoning": "Skeptic confirmed alignment: The new fact states: \"The International Monetary Fund (IMF) has projected growth of 3.2 per cent for 2024.\" This is directly supported by Historical Fact 1, which says: \"The International Monetary Fund (IMF) has projected growth of 3.2 per cent and 3.3 per cent for 2024 and 2025, respectively.\" Both quotes come from the same source (page 5 of 01-india-economic-survey-2024-25-excerpt.pdf). Therefore the new fact is corroborated and does not contradict any historical fact. The other historical facts concern different metrics (world growth rates and a five\u2011year average) and are unrelated to the specific 2024 IMF projection, so they do not create a contradiction.",
+        "reasoning": "Skeptic confirmed alignment: - Historical Fact (IMF projected global growth 2024) states: \"The International Monetary Fund (IMF) has projected growth of 3.2 per cent and 3.3 per cent for 2024 and 2025, respectively.\" (page 5)\n- New Fact repeats the same statement for 2024: \"The International Monetary Fund (IMF) has projected growth of 3.2 per cent and 3.3 per cent for 2024 and 2025, respectively.\" (page 5)\n\nBoth the historical record and the new fact convey the identical projection of 3.2% growth for 2024, with no conflicting information. Therefore, there is no contradiction, and the new fact is fully corroborated by the historical facts.",
         "retrieved_facts": [
             {
-                "topic": "IMF projected global growth 2024-2025",
+                "time_period": "2024",
                 "page_number": 5,
+                "topic": "IMF projected global growth (2024)",
                 "source_pdf": "01-india-economic-survey-2024-25-excerpt.pdf",
-                "fact": "The International Monetary Fund (IMF) has projected growth of 3.2 per cent and 3.3 per cent for 2024 and 2025, respectively.",
+                "fact": "The International Monetary Fund (IMF) has projected growth of 3.2 per cent for 2024.",
                 "source_quote": "The International Monetary Fund (IMF) has projected growth of 3.2 per cent and 3.3 per cent for 2024 and 2025, respectively.",
+                "distance": 0.008771419525146484
+            },
+            {
+                "source_pdf": "01-india-economic-survey-2024-25-excerpt.pdf",
                 "time_period": "2024-2025",
+                "page_number": 5,
+                "source_quote": "The International Monetary Fund (IMF) has projected growth of 3.2 per cent and 3.3 per cent for 2024 and 2025, respectively.",
+                "topic": "IMF projected global growth 2024-2025",
+                "fact": "The International Monetary Fund (IMF) has projected growth of 3.2 per cent and 3.3 per cent for 2024 and 2025, respectively.",
                 "distance": 0.022451341152191162
             },
             {
+                "fact": "The International Monetary Fund (IMF) has projected growth of 3.3 per cent for 2025.",
+                "topic": "IMF projected global growth (2025)",
+                "time_period": "2025",
+                "page_number": 5,
+                "source_quote": "The International Monetary Fund (IMF) has projected growth of 3.2 per cent and 3.3 per cent for 2024 and 2025, respectively.",
                 "source_pdf": "01-india-economic-survey-2024-25-excerpt.pdf",
-                "topic": "World growth rates (IMF WEO)",
-                "time_period": "2023-2025",
-                "source_quote": "World growth 4.4 4.2 4.2 2023 2024 2025",
-                "page_number": 6,
-                "fact": "World growth is projected at 4.4% in 2023, 4.2% in 2024 and 4.2% in 2025.",
-                "distance": 0.1799837350845337
-            },
-            {
-                "topic": "Global growth forecast",
-                "source_pdf": "01-india-economic-survey-2024-25-excerpt.pdf",
-                "source_quote": "global growth is expected to average around 3.2 per cent",
-                "time_period": "next five years",
-                "page_number": 6,
-                "fact": "Global growth is expected to average around 3.2 per cent over the next five years.",
-                "distance": 0.36191195249557495
+                "distance": 0.03418922424316406
             }
         ]
     },
@@ -131,35 +500,35 @@
             "page_number": 5
         },
         "source_pdf": "01-india-economic-survey-2024-25-excerpt.pdf",
-        "status": "Contradiction",
-        "reasoning": "Skeptic flagged: The new fact states: \"The International Monetary Fund (IMF) has projected growth of 3.3 per cent for 2025\" (source_quote from page 5). This is directly supported by the historical fact titled \"IMF projected global growth 2024-2025\", which says \"The International Monetary Fund (IMF) has projected growth of 3.2 per cent and 3.3 per cent for 2024 and 2025, respectively\" (source_quote, page 5). However, another historical fact titled \"World growth rates (IMF WEO)\" reports a different projection for 2025: \"World growth is projected at 4.2% in 2025\" (source_quote, page 6). Since both statements refer to the IMF's projection of global growth for the same year (2025) but give mutually exclusive percentages (3.3% vs 4.2%), there is a contradiction. Therefore, the new fact is both corroborated by one historical fact and contradicted by another.\nReconciler verdict: The new fact states: \"The International Monetary Fund (IMF) has projected growth of 3.3 per cent for 2025\" (source_quote: \"The International Monetary Fund (IMF) has projected growth of 3.2 per cent and 3.3 per cent for 2024 and 2025, respectively.\", page 5). This aligns with the historical fact titled \"IMF projected global growth 2024-2025\" which also says the IMF projected 3.3% for 2025 (source_quote: \"The International Monetary Fund (IMF) has projected growth of 3.2 per cent and 3.3 per cent for 2024 and 2025, respectively.\", page 5). However, another historical fact titled \"World growth rates (IMF WEO)\" reports a different IMF projection for the same year: \"World growth is projected at 4.2% in 2025\" (source_quote: \"World growth 4.4 4.2 4.2 2023 2024 2025\", page 6). Both statements refer to the IMF's projection of global (world) economic growth for 2025, yet they give mutually exclusive percentages (3.3% vs 4.2%). No contextual difference (such as different time frames, scopes, or units) is indicated that would reconcile the numbers. Therefore, the new fact is directly contradicted by the historical fact on page 6, resulting in a genuine contradiction.",
+        "status": "Corroborated",
+        "reasoning": "Skeptic confirmed alignment: - The new fact states: \"The International Monetary Fund (IMF) has projected growth of 3.3 per cent for 2025.\" \n- Historical fact #1 says: \"The International Monetary Fund (IMF) has projected growth of 3.3 per cent for 2025.\" (source quote: \"The International Monetary Fund (IMF) has projected growth of 3.2 per cent and 3.3 per cent for 2024 and 2025, respectively.\")\n- Historical fact #2 also includes the same projection for 2025, and historical fact #3 references the same source.\n- All sources agree on the 3.3\u202f% projection for 2025, so there is no contradiction; the new fact is fully supported by the historical facts.",
         "retrieved_facts": [
             {
-                "fact": "The International Monetary Fund (IMF) has projected growth of 3.2 per cent and 3.3 per cent for 2024 and 2025, respectively.",
-                "topic": "IMF projected global growth 2024-2025",
-                "time_period": "2024-2025",
-                "source_pdf": "01-india-economic-survey-2024-25-excerpt.pdf",
-                "source_quote": "The International Monetary Fund (IMF) has projected growth of 3.2 per cent and 3.3 per cent for 2024 and 2025, respectively.",
+                "fact": "The International Monetary Fund (IMF) has projected growth of 3.3 per cent for 2025.",
                 "page_number": 5,
+                "time_period": "2025",
+                "source_quote": "The International Monetary Fund (IMF) has projected growth of 3.2 per cent and 3.3 per cent for 2024 and 2025, respectively.",
+                "source_pdf": "01-india-economic-survey-2024-25-excerpt.pdf",
+                "topic": "IMF projected global growth (2025)",
+                "distance": 0.008310496807098389
+            },
+            {
+                "page_number": 5,
+                "time_period": "2024-2025",
+                "fact": "The International Monetary Fund (IMF) has projected growth of 3.2 per cent and 3.3 per cent for 2024 and 2025, respectively.",
+                "source_quote": "The International Monetary Fund (IMF) has projected growth of 3.2 per cent and 3.3 per cent for 2024 and 2025, respectively.",
+                "topic": "IMF projected global growth 2024-2025",
+                "source_pdf": "01-india-economic-survey-2024-25-excerpt.pdf",
                 "distance": 0.01982569694519043
             },
             {
-                "source_quote": "The International Monetary Fund (IMF) has projected growth of 3.2 per cent and 3.3 per cent for 2024 and 2025, respectively.",
-                "topic": "IMF projected global growth (2024)",
-                "source_pdf": "01-india-economic-survey-2024-25-excerpt.pdf",
-                "time_period": "2024",
                 "page_number": 5,
+                "source_quote": "The International Monetary Fund (IMF) has projected growth of 3.2 per cent and 3.3 per cent for 2024 and 2025, respectively.",
+                "time_period": "2024",
                 "fact": "The International Monetary Fund (IMF) has projected growth of 3.2 per cent for 2024.",
-                "distance": 0.029926657676696777
-            },
-            {
                 "source_pdf": "01-india-economic-survey-2024-25-excerpt.pdf",
-                "source_quote": "World growth 4.4 4.2 4.2 2023 2024 2025",
-                "page_number": 6,
-                "time_period": "2023-2025",
-                "topic": "World growth rates (IMF WEO)",
-                "fact": "World growth is projected at 4.4% in 2023, 4.2% in 2024 and 4.2% in 2025.",
-                "distance": 0.18985891342163086
+                "topic": "IMF projected global growth (2024)",
+                "distance": 0.029926657676696777
             }
         ]
     },
@@ -173,485 +542,239 @@
         },
         "source_pdf": "01-india-economic-survey-2024-25-excerpt.pdf",
         "status": "Corroborated",
-        "reasoning": "Skeptic confirmed alignment: The new fact states: \"Over the next five years, global growth is expected to average around 3.2 per cent, which is modest by historical standards.\" (source_quote from the new fact, page 5). This matches exactly the first historical fact which says: \"Over the next five years, global growth is expected to average around 3.2 per cent.\" (source_quote, page 5) and also aligns with the second historical fact that repeats the same forecast: \"global growth is expected to average around 3.2 per cent\" (source_quote, page 6). Both historical entries refer to the same time period (next five years) and the same numeric forecast (3.2%). Therefore there is no contradiction; instead the new fact is directly corroborated by the historical facts. The third historical fact concerns the actual growth rate in 2024 and does not conflict with the five\u2011year average forecast, so it is unrelated rather than contradictory.",
+        "reasoning": "Skeptic confirmed alignment: - Historical Fact 1 (page 5 of \"01-india-economic-survey-2024-25-excerpt.pdf\"): \"Over the next five years, global growth is expected to average around 3.2 per cent, which is modest by historical standards.\"\n- Historical Fact 2 (page 5 of the same document): \"Over the next five years, global growth is expected to average around 3.2 per cent, which is modest by historical standards.\"\n- Historical Fact 3 (page 6 of the same document): \"global growth is expected to average around 3.2 per cent\"\n- New Fact (page 5): \"Over the next five years, global growth is expected to average around 3.2 per cent, which is modest by historical standards.\"\nAll statements refer to the same time period (the next five years) and give the identical growth estimate of 3.2\u202f%. Therefore there is no contradiction; the new fact is fully supported by the historical facts.",
         "retrieved_facts": [
             {
+                "topic": "Average global growth (next five years)",
                 "time_period": "next five years",
-                "fact": "Over the next five years, global growth is expected to average around 3.2 per cent.",
                 "page_number": 5,
-                "source_pdf": "01-india-economic-survey-2024-25-excerpt.pdf",
-                "topic": "Five\u2011year average global growth forecast",
+                "fact": "Over the next five years, global growth is expected to average around 3.2 per cent.",
                 "source_quote": "Over the next five years, global growth is expected to average around 3.2 per cent, which is modest by historical standards.",
+                "source_pdf": "01-india-economic-survey-2024-25-excerpt.pdf",
+                "distance": 0.005302488803863525
+            },
+            {
+                "source_quote": "Over the next five years, global growth is expected to average around 3.2 per cent, which is modest by historical standards.",
+                "time_period": "next five years",
+                "page_number": 5,
+                "topic": "Five\u2011year average global growth forecast",
+                "fact": "Over the next five years, global growth is expected to average around 3.2 per cent.",
+                "source_pdf": "01-india-economic-survey-2024-25-excerpt.pdf",
                 "distance": 0.043974995613098145
             },
             {
-                "source_quote": "global growth is expected to average around 3.2 per cent",
-                "page_number": 6,
                 "source_pdf": "01-india-economic-survey-2024-25-excerpt.pdf",
+                "page_number": 6,
+                "source_quote": "global growth is expected to average around 3.2 per cent",
                 "time_period": "next five years",
                 "fact": "Global growth is expected to average around 3.2 per cent over the next five years.",
                 "topic": "Global growth forecast",
                 "distance": 0.05576092004776001
-            },
-            {
-                "fact": "Global growth was 3.3% in 2024, down from 3.5% in 2023 and below the 2000-19 historical average of 3.7%.",
-                "time_period": "2024",
-                "source_pdf": "02-rbi-annual-report-2024-25-excerpt.pdf",
-                "source_quote": "global growth at 3.3 per cent in 2024 (3.5 per cent a year ago) was below the historical average (2000-19) of 3.7 per cent",
-                "page_number": 7,
-                "topic": "Global Economic Growth",
-                "distance": 0.21608096361160278
             }
         ]
     },
     {
         "fact": {
-            "topic": "Global growth outlook",
-            "fact": "Global growth is expected to average around 3.2% over the next five years.",
-            "time_period": "Next five years",
+            "topic": "Global Growth Forecast (5-year average)",
+            "fact": "global growth is expected to average around 3.2 per cent over the next five years",
+            "time_period": "next five years",
             "source_quote": "Over the next five years, global growth is expected to average around 3.2 per cent",
             "page_number": 6
         },
         "source_pdf": "01-india-economic-survey-2024-25-excerpt.pdf",
         "status": "Corroborated",
-        "reasoning": "Skeptic confirmed alignment: The new fact states: \"Over the next five years, global growth is expected to average around 3.2 per cent\" (source_quote, page_number 6). This matches exactly the historical facts, which include statements such as \"global growth is expected to average around 3.2 per cent\" (source_quote, page 6) and \"Over the next five years, global growth is expected to average around 3.2 per cent\" (source_quote, page 5). All refer to the same metric (average global growth) and the same time period (the next five years). Therefore there is no contradiction; instead, the new fact is fully corroborated by the historical facts.",
+        "reasoning": "Skeptic confirmed alignment: - Historical Fact (page 5): \"Over the next five years, global growth is expected to average around 3.2 per cent, which is modest by historical standards.\"\n- Historical Fact (page 6): \"global growth is expected to average around 3.2 per cent\"\n- New Fact (page 6): \"Over the next five years, global growth is expected to average around 3.2 per cent\"\nThese statements all describe the same forecast\u2014global growth averaging about 3.2\u202f% over the next five years. There is no disagreement; the new fact is fully consistent with the historical facts, thus it is corroborated and not contradictory.",
         "retrieved_facts": [
+            {
+                "source_pdf": "01-india-economic-survey-2024-25-excerpt.pdf",
+                "fact": "Over the next five years, global growth is expected to average around 3.2 per cent.",
+                "page_number": 5,
+                "topic": "Five\u2011year average global growth forecast",
+                "source_quote": "Over the next five years, global growth is expected to average around 3.2 per cent, which is modest by historical standards.",
+                "time_period": "next five years",
+                "distance": 0.020699620246887207
+            },
             {
                 "topic": "Global growth forecast",
                 "source_pdf": "01-india-economic-survey-2024-25-excerpt.pdf",
-                "time_period": "next five years",
-                "fact": "Global growth is expected to average around 3.2 per cent over the next five years.",
-                "source_quote": "global growth is expected to average around 3.2 per cent",
                 "page_number": 6,
-                "distance": 0.07996565103530884
-            },
-            {
-                "source_quote": "Over the next five years, global growth is expected to average around 3.2 per cent, which is modest by historical standards.",
-                "topic": "Five\u2011year average global growth forecast",
-                "fact": "Over the next five years, global growth is expected to average around 3.2 per cent.",
-                "source_pdf": "01-india-economic-survey-2024-25-excerpt.pdf",
-                "page_number": 5,
                 "time_period": "next five years",
-                "distance": 0.08118486404418945
+                "source_quote": "global growth is expected to average around 3.2 per cent",
+                "fact": "Global growth is expected to average around 3.2 per cent over the next five years.",
+                "distance": 0.02308410406112671
             },
             {
                 "fact": "Over the next five years, global growth is expected to average around 3.2 per cent.",
+                "source_quote": "Over the next five years, global growth is expected to average around 3.2 per cent, which is modest by historical standards.",
                 "topic": "Average global growth (next five years)",
-                "source_quote": "Over the next five years, global growth is expected to average around 3.2 per cent, which is modest by historical standards.",
                 "page_number": 5,
-                "source_pdf": "01-india-economic-survey-2024-25-excerpt.pdf",
                 "time_period": "next five years",
-                "distance": 0.08330017328262329
-            }
-        ]
-    },
-    {
-        "fact": {
-            "topic": "World GDP growth projection",
-            "fact": "World growth projected at 4.4% in 2023 and 4.2% in both 2024 and 2025.",
-            "time_period": "2023-2025",
-            "source_quote": "World growth 4.4 4.2 4.2 2023 2024 2025 ... Source: IMF WEO (January 2025)",
-            "page_number": 6
-        },
-        "source_pdf": "01-india-economic-survey-2024-25-excerpt.pdf",
-        "status": "Reconciled by Context",
-        "reasoning": "Skeptic flagged: The new fact states \"World growth 4.4 4.2 4.2 2023 2024 2025 ... Source: IMF WEO (January 2025)\" indicating a projected global GDP growth of 4.4% for 2023 and 4.2% for both 2024 and 2025. This directly conflicts with the historical facts:\n- For 2023, the historical fact records \"The global economy grew by 3.3 per cent in 2023\" (source_quote from 01-india-economic-survey-2024-25-excerpt.pdf, page 5). The new projection of 4.4% is substantially higher than the reported actual 3.3%.\n- For 2024, the historical fact notes \"global growth at 3.3 per cent in 2024 (3.5 per cent a year ago)\" (source_quote from 02-rbi-annual-report-2024-25-excerpt.pdf, page 7). The new projection of 4.2% contradicts this actual figure.\n- For 2025, the historical fact projects \"Growth of 2.8% in 2025\" (source_quote from 02-rbi-annual-report-2024-25-excerpt.pdf, page 15). The new projection of 4.2% again disagrees.\nSince the new fact and the historical facts refer to the same metric (global/world GDP growth) and the same time periods but give mutually exclusive values, there is a clear contradiction. No historical fact supports the new projection, so there is no corroboration.\n\nReconciler verdict: The apparent mismatch stems from a difference in the nature of the data rather than a factual error. The historical facts record **actual observed** global growth rates:\n- 2023: \"The global economy grew by 3.3 per cent in 2023.\" (source_quote from 01-india-economic-survey-2024-25-excerpt.pdf, page 5)\n- 2024: \"global growth at 3.3 per cent in 2024 (3.5 per cent a year ago) was below the historical average (2000-19) of 3.7 per cent\" (source_quote from 02-rbi-annual-report-2024-25-excerpt.pdf, page 7)\n- 2025 projection (from the same RBI report): \"Growth of 2.8% in 2025\" (source_quote from 02-rbi-annual-report-2024-25-excerpt.pdf, page 15)\n\nThe new fact, however, is a **forecast** from the IMF World Economic Outlook (January 2025): \"World growth 4.4 4.2 4.2 2023 2024 2025 ... Source: IMF WEO (January 2025)\" (source_quote, page 6). Forecasts are forward\u2011looking estimates and can differ from the actual outcomes that later become part of the historical record. Therefore, the higher projected rates (4.4% for 2023 and 4.2% for 2024\u20112025) do not directly contradict the observed figures; they simply reflect a different context\u2014projection versus realized data. This contextual distinction resolves the apparent conflict.\n\nHence, the relationship is classified as **Reconciled by Context**.",
-        "retrieved_facts": [
-            {
-                "time_period": "2025-2026",
-                "page_number": 15,
-                "fact": "Growth of 2.8% in 2025, 3.0% in 2026 (3.3% in 2024)",
-                "source_pdf": "02-rbi-annual-report-2024-25-excerpt.pdf",
-                "topic": "Global Economic Growth",
-                "source_quote": "The global economy is projected to grow by 2.8 per cent in 2025 and 3.0 per cent in 2026 (3.3 per cent in 2024).",
-                "distance": 0.18546181917190552
-            },
-            {
-                "time_period": "2023",
-                "topic": "Global GDP growth (2023)",
-                "page_number": 5,
-                "fact": "The global economy grew by 3.3 per cent in 2023.",
                 "source_pdf": "01-india-economic-survey-2024-25-excerpt.pdf",
-                "source_quote": "The global economy grew by 3.3 per cent in 2023.",
-                "distance": 0.2070084810256958
-            },
-            {
-                "source_quote": "global growth at 3.3 per cent in 2024 (3.5 per cent a year ago) was below the historical average (2000-19) of 3.7 per cent",
-                "time_period": "2024",
-                "page_number": 7,
-                "fact": "Global growth was 3.3% in 2024, down from 3.5% in 2023 and below the 2000-19 historical average of 3.7%.",
-                "source_pdf": "02-rbi-annual-report-2024-25-excerpt.pdf",
-                "topic": "Global Economic Growth",
-                "distance": 0.2071031928062439
+                "distance": 0.06528770923614502
             }
         ]
     },
     {
         "fact": {
-            "topic": "United States economic growth",
-            "fact": "Growth in the US is expected to remain strong at 2.8% in 2024, with a slight decline anticipated in 2025.",
+            "topic": "United States GDP Growth Forecast",
+            "fact": "Growth in the US is expected to remain strong at 2.8 per cent in 2024 and may decline slightly in 2025",
             "time_period": "2024-2025",
             "source_quote": "Growth in the US is expected to remain strong at 2.8 per cent in 2024 and may decline slightly in 2025",
             "page_number": 6
         },
         "source_pdf": "01-india-economic-survey-2024-25-excerpt.pdf",
         "status": "Corroborated",
-        "reasoning": "Skeptic confirmed alignment: The new fact states: \"Growth in the US is expected to remain strong at 2.8% in 2024, with a slight decline anticipated in 2025.\" This matches exactly the historical fact entry for United States economic growth forecast, which says: \"Growth in the US is expected to remain strong at 2.8 per cent in 2024 and may decline slightly in 2025\" (source_quote, page 6 of 01-india-economic-survey-2024-25-excerpt.pdf). Since the statements are identical in content, time period, and source, there is no contradiction; instead, the new fact is fully corroborated by the historical fact.",
+        "reasoning": "Skeptic confirmed alignment: - Historical Fact 1 states: \"Growth in the US is expected to remain strong at 2.8 per cent in 2024 and may decline slightly in 2025\" (2024-2025)\u3010source_quote\u3011.\n- Historical Fact 2 repeats the same statement: \"Growth in the US is expected to remain strong at 2.8% in 2024, with a slight decline anticipated in 2025\" (2024-2025)\u3010source_quote\u3011.\n- The New Fact says exactly: \"Growth in the US is expected to remain strong at 2.8 per cent in 2024 and may decline slightly in 2025\" (2024-2025)\u3010source_quote\u3011.\nThese three statements are identical in content, time period, and metric, indicating full agreement rather than any contradiction. Therefore, the new fact is corroborated by the historical facts and does not need to be flagged.",
         "retrieved_facts": [
             {
                 "topic": "United States economic growth forecast",
-                "source_quote": "Growth in the US is expected to remain strong at 2.8 per cent in 2024 and may decline slightly in 2025",
                 "page_number": 6,
+                "time_period": "2024-2025",
+                "source_quote": "Growth in the US is expected to remain strong at 2.8 per cent in 2024 and may decline slightly in 2025",
                 "source_pdf": "01-india-economic-survey-2024-25-excerpt.pdf",
                 "fact": "Growth in the US is expected to remain strong at 2.8 per cent in 2024 and may decline slightly in 2025.",
+                "distance": 0.05745941400527954
+            },
+            {
+                "source_pdf": "01-india-economic-survey-2024-25-excerpt.pdf",
                 "time_period": "2024-2025",
-                "distance": 0.05181831121444702
+                "page_number": 6,
+                "topic": "United States economic growth",
+                "source_quote": "Growth in the US is expected to remain strong at 2.8 per cent in 2024 and may decline slightly in 2025",
+                "fact": "Growth in the US is expected to remain strong at 2.8% in 2024, with a slight decline anticipated in 2025.",
+                "distance": 0.10823684930801392
             },
             {
-                "page_number": 15,
-                "time_period": "2025-2026",
-                "source_pdf": "02-rbi-annual-report-2024-25-excerpt.pdf",
-                "topic": "Global Economic Growth",
-                "source_quote": "The global economy is projected to grow by 2.8 per cent in 2025 and 3.0 per cent in 2026 (3.3 per cent in 2024).",
-                "fact": "Growth of 2.8% in 2025, 3.0% in 2026 (3.3% in 2024)",
-                "distance": 0.2665597200393677
-            },
-            {
-                "topic": "Global Economic Growth",
-                "time_period": "2024",
-                "source_quote": "global growth at 3.3 per cent in 2024 (3.5 per cent a year ago) was below the historical average (2000-19) of 3.7 per cent",
-                "page_number": 7,
-                "fact": "Global growth was 3.3% in 2024, down from 3.5% in 2023 and below the 2000-19 historical average of 3.7%.",
-                "source_pdf": "02-rbi-annual-report-2024-25-excerpt.pdf",
-                "distance": 0.31695008277893066
+                "fact": "World growth projected at 4.4% in 2023 and 4.2% in both 2024 and 2025.",
+                "time_period": "2023-2025",
+                "page_number": 6,
+                "source_pdf": "01-india-economic-survey-2024-25-excerpt.pdf",
+                "topic": "World GDP growth projection",
+                "source_quote": "World growth 4.4 4.2 4.2 2023 2024 2025 ... Source: IMF WEO (January 2025)",
+                "distance": 0.24396681785583496
             }
         ]
     },
     {
         "fact": {
-            "topic": "Euro area economic growth",
-            "fact": "Euro area growth expected to rise from 0.4% in 2023 to 0.8% in 2024 and 1.0% in 2025.",
+            "topic": "Euro Area GDP Growth Forecast",
+            "fact": "growth is expected to improve from 0.4 per cent in 2023 to 0.8 per cent in 2024 and further to 1.0 per cent in 2025",
             "time_period": "2023-2025",
             "source_quote": "In the Euro area, growth is expected to improve from 0.4 per cent in 2023 to 0.8 per cent in 2024 and further to 1.0 per cent in 2025",
             "page_number": 6
         },
         "source_pdf": "01-india-economic-survey-2024-25-excerpt.pdf",
         "status": "Corroborated",
-        "reasoning": "Skeptic confirmed alignment: The new fact states: \"In the Euro area, growth is expected to improve from 0.4 per cent in 2023 to 0.8 per cent in 2024 and further to 1.0 per cent in 2025\" (source_quote, page 6). This matches exactly the historical fact entry for \"Euro area economic growth forecast\" which says: \"Growth in the Euro area is expected to improve from 0.4 per cent in 2023 to 0.8 per cent in 2024 and further to 1.0 per cent in 2025\" (source_quote, page 6). The two statements are identical in content, time period, and source location, indicating corroboration rather than contradiction. No other historical facts address Euro area growth, so there is no conflicting information.",
+        "reasoning": "Skeptic confirmed alignment: - The new fact states: \"growth is expected to improve from 0.4 per cent in 2023 to 0.8 per cent in 2024 and further to 1.0 per cent in 2025\" (source quote provided).\n- Historical Fact 1 says: \"Growth in the Euro area is expected to improve from 0.4 per cent in 2023 to 0.8 per cent in 2024 and further to 1.0 per cent in 2025\" (source quote).\n- Historical Fact 2 repeats the same wording: \"In the Euro area, growth is expected to improve from 0.4 per cent in 2023 to 0.8 per cent in 2024 and further to 1.0 per cent in 2025\" (source quote).\n- All three statements are identical in content, time period (2023\u20112025), and source location (page 6 of the same PDF). Therefore, there is no contradiction; the new fact is fully supported by the historical facts.\n- Consequently, the fact is corroborated and no flag is needed.",
         "retrieved_facts": [
             {
-                "page_number": 6,
+                "time_period": "2023-2025",
                 "source_pdf": "01-india-economic-survey-2024-25-excerpt.pdf",
+                "page_number": 6,
                 "fact": "Growth in the Euro area is expected to improve from 0.4 per cent in 2023 to 0.8 per cent in 2024 and further to 1.0 per cent in 2025.",
                 "source_quote": "growth is expected to improve from 0.4 per cent in 2023 to 0.8 per cent in 2024 and further to 1.0 per cent in 2025",
-                "time_period": "2023-2025",
                 "topic": "Euro area economic growth forecast",
-                "distance": 0.06427013874053955
+                "distance": 0.03620094060897827
             },
             {
-                "source_quote": "The global economy is projected to grow by 2.8 per cent in 2025 and 3.0 per cent in 2026 (3.3 per cent in 2024).",
-                "source_pdf": "02-rbi-annual-report-2024-25-excerpt.pdf",
-                "time_period": "2025-2026",
-                "topic": "Global Economic Growth",
-                "page_number": 15,
-                "fact": "Growth of 2.8% in 2025, 3.0% in 2026 (3.3% in 2024)",
-                "distance": 0.35495948791503906
+                "source_pdf": "01-india-economic-survey-2024-25-excerpt.pdf",
+                "source_quote": "In the Euro area, growth is expected to improve from 0.4 per cent in 2023 to 0.8 per cent in 2024 and further to 1.0 per cent in 2025",
+                "topic": "Euro area economic growth",
+                "page_number": 6,
+                "time_period": "2023-2025",
+                "fact": "Euro area growth expected to rise from 0.4% in 2023 to 0.8% in 2024 and 1.0% in 2025.",
+                "distance": 0.10476517677307129
             },
             {
-                "time_period": "2024-2026",
-                "source_quote": "The growth rate in AEs is projected to decelerate to 1.4 per cent in 2025 from 1.8 per cent in 2024, before marginally improving to 1.5 per cent in 2026.",
-                "fact": "Growth rate decelerates to 1.4% in 2025 from 1.8% in 2024, then improves to 1.5% in 2026",
-                "page_number": 15,
-                "source_pdf": "02-rbi-annual-report-2024-25-excerpt.pdf",
-                "topic": "Advanced Economies (AE) Growth",
-                "distance": 0.36229586601257324
+                "source_quote": "Growth in the US is expected to remain strong at 2.8 per cent in 2024 and may decline slightly in 2025",
+                "fact": "Growth in the US is expected to remain strong at 2.8 per cent in 2024 and may decline slightly in 2025",
+                "source_pdf": "01-india-economic-survey-2024-25-excerpt.pdf",
+                "time_period": "2024-2025",
+                "page_number": 6,
+                "topic": "United States GDP Growth Forecast",
+                "distance": 0.29832231998443604
             }
         ]
     },
     {
         "fact": {
-            "topic": "Global composite PMI",
-            "fact": "Stayed in the expansion zone for the fourteenth month in a row (as of December 2024).",
-            "time_period": "December 2024",
-            "source_quote": "The global composite Purchasing Managers\u2019 Index (PMI) has stayed in the expansion zone for the fourteenth month in a row (as of December 2024).",
-            "page_number": 7
+            "topic": "Global Economic Growth Forecast",
+            "fact": "The global economy in 2025 is likely to grow 3.7 per cent.",
+            "time_period": "2025",
+            "source_quote": "3.7 per cent",
+            "page_number": 6
         },
-        "source_pdf": "01-india-economic-survey-2024-25-excerpt.pdf",
-        "status": "Corroborated",
-        "reasoning": "Skeptic confirmed alignment: The new fact states: \"The global composite Purchasing Managers\u2019 Index (PMI) has stayed in the expansion zone for the fourteenth month in a row (as of December 2024).\" This is exactly the same statement as the first historical fact, which also says: \"The global composite PMI has stayed in the expansion zone for the fourteenth month in a row (as of December 2024).\" Both share the identical source quote and refer to the same time period (December 2024). Therefore there is no contradiction; instead, the new fact is directly corroborated by the historical fact.",
-        "retrieved_facts": [
-            {
-                "source_pdf": "01-india-economic-survey-2024-25-excerpt.pdf",
-                "time_period": "as of December 2024",
-                "fact": "The global composite PMI has stayed in the expansion zone for the fourteenth month in a row",
-                "topic": "Global Composite Purchasing Managers' Index (PMI)",
-                "page_number": 7,
-                "source_quote": "The global composite Purchasing Managers\u2019 Index (PMI) has stayed in the expansion zone for the fourteenth month in a row (as of December 2024).",
-                "distance": 0.15595686435699463
-            },
-            {
-                "source_pdf": "01-india-economic-survey-2024-25-excerpt.pdf",
-                "source_quote": "Global Manufacturing PMI Global Services PMI Global Composite PMI 56 54 52 50",
-                "page_number": 8,
-                "topic": "Global Composite PMI (Nov 2024)",
-                "time_period": "November 2024",
-                "fact": "Global Composite PMI was 52 in November 2024.",
-                "distance": 0.21533113718032837
-            },
-            {
-                "page_number": 7,
-                "time_period": "first half of 2024",
-                "source_pdf": "01-india-economic-survey-2024-25-excerpt.pdf",
-                "source_quote": "In 2024, the global manufacturing PMI started strong, moving into expansion for the first time since mid-2023 and remained so through the first half of the year.",
-                "topic": "Global Manufacturing PMI",
-                "fact": "Started strong in 2024, moving into expansion for the first time since mid-2023 and remained so through the first half of the year",
-                "distance": 0.27193939685821533
-            }
-        ]
-    },
-    {
-        "fact": {
-            "topic": "Global manufacturing PMI - expansion",
-            "fact": "Started strong, moving into expansion for the first time since mid-2023 and remained so through the first half of the year.",
-            "time_period": "First half of 2024",
-            "source_quote": "In 2024, the global manufacturing PMI started strong, moving into expansion for the first time since mid-2023 and remained so through the first half of the year.",
-            "page_number": 7
-        },
-        "source_pdf": "01-india-economic-survey-2024-25-excerpt.pdf",
-        "status": "Corroborated",
-        "reasoning": "Skeptic confirmed alignment: The new fact states: \"In 2024, the global manufacturing PMI started strong, moving into expansion for the first time since mid-2023 and remained so through the first half of the year.\" This is exactly the same statement as the first historical fact, which reads: \"In 2024, the global manufacturing PMI started strong, moving into expansion for the first time since mid-2023 and remained so through the first half of the year.\" (source_quote from both the new fact and the historical fact, page 7 of 01-india-economic-survey-2024-25-excerpt.pdf). Since the new fact directly matches the historical fact, there is no contradiction and it is fully corroborated.",
-        "retrieved_facts": [
-            {
-                "topic": "Global Manufacturing PMI",
-                "source_pdf": "01-india-economic-survey-2024-25-excerpt.pdf",
-                "fact": "Started strong in 2024, moving into expansion for the first time since mid-2023 and remained so through the first half of the year",
-                "page_number": 7,
-                "source_quote": "In 2024, the global manufacturing PMI started strong, moving into expansion for the first time since mid-2023 and remained so through the first half of the year.",
-                "time_period": "first half of 2024",
-                "distance": 0.07113265991210938
-            },
-            {
-                "topic": "Manufacturing PMI",
-                "fact": "The latest Manufacturing PMI for December 2024 remained well within the expansionary zone and exceeded its long-term average",
-                "time_period": "December 2024",
-                "source_quote": "The latest Manufacturing PMI for December 2024 remained well within the expansionary zone. The expansion rate for December 2024 exceeded its long-term average, driven by new business gains, robust demand, and advertising efforts.",
-                "page_number": 19,
-                "source_pdf": "01-india-economic-survey-2024-25-excerpt.pdf",
-                "distance": 0.22164905071258545
-            },
-            {
-                "source_pdf": "01-india-economic-survey-2024-25-excerpt.pdf",
-                "fact": "Weaker conditions pushed the PMI back into contraction",
-                "source_quote": "By July 2024, weaker conditions pushed the PMI back into contraction.",
-                "time_period": "July 2024",
-                "topic": "Global Manufacturing PMI",
-                "page_number": 7,
-                "distance": 0.2355024218559265
-            }
-        ]
-    },
-    {
-        "fact": {
-            "topic": "Global manufacturing PMI - contraction",
-            "fact": "By July 2024, weaker conditions pushed the PMI back into contraction.",
-            "time_period": "July 2024",
-            "source_quote": "By July 2024, weaker conditions pushed the PMI back into contraction.",
-            "page_number": 7
-        },
-        "source_pdf": "01-india-economic-survey-2024-25-excerpt.pdf",
-        "status": "Corroborated",
-        "reasoning": "Skeptic confirmed alignment: The new fact states: \"By July 2024, weaker conditions pushed the PMI back into contraction.\" This matches exactly the historical fact #1, which also says: \"By July 2024, weaker conditions pushed the PMI back into contraction.\" (source_quote from historical fact, page 7). Both refer to the same time period (July 2024) and convey the same statement, so there is no contradiction. The other historical facts describe the PMI being in expansion during the first half of 2024, which does not conflict with a contraction occurring later in July 2024. Therefore, the new fact is corroborated and not contradictory.",
-        "retrieved_facts": [
-            {
-                "topic": "Global Manufacturing PMI",
-                "fact": "Weaker conditions pushed the PMI back into contraction",
-                "time_period": "July 2024",
-                "page_number": 7,
-                "source_pdf": "01-india-economic-survey-2024-25-excerpt.pdf",
-                "source_quote": "By July 2024, weaker conditions pushed the PMI back into contraction.",
-                "distance": 0.024878323078155518
-            },
-            {
-                "topic": "Global Manufacturing PMI",
-                "source_quote": "In 2024, the global manufacturing PMI started strong, moving into expansion for the first time since mid-2023 and remained so through the first half of the year.",
-                "fact": "Started strong in 2024, moving into expansion for the first time since mid-2023 and remained so through the first half of the year",
-                "source_pdf": "01-india-economic-survey-2024-25-excerpt.pdf",
-                "time_period": "first half of 2024",
-                "page_number": 7,
-                "distance": 0.20045745372772217
-            },
-            {
-                "source_pdf": "01-india-economic-survey-2024-25-excerpt.pdf",
-                "time_period": "First half of 2024",
-                "topic": "Global manufacturing PMI - expansion",
-                "source_quote": "In 2024, the global manufacturing PMI started strong, moving into expansion for the first time since mid-2023 and remained so through the first half of the year.",
-                "page_number": 7,
-                "fact": "Started strong, moving into expansion for the first time since mid-2023 and remained so through the first half of the year.",
-                "distance": 0.20967447757720947
-            }
-        ]
-    },
-    {
-        "fact": {
-            "topic": "Global manufacturing PMI - November index",
-            "fact": "Stabilised in November with an index value of 50.0, indicating no overall change in operating conditions.",
-            "time_period": "November 2024",
-            "source_quote": "Following four months of gradual declines, the global manufacturing sector stabilised in November with an index value of 50.0, indicating no overall change in operating conditions.",
-            "page_number": 7
-        },
-        "source_pdf": "01-india-economic-survey-2024-25-excerpt.pdf",
+        "source_pdf": "02-rbi-annual-report-2024-25-excerpt.pdf",
         "status": "Contradiction",
-        "reasoning": "Skeptic flagged: The new fact states: \"Following four months of gradual declines, the global manufacturing sector stabilised in November with an index value of 50.0, indicating no overall change in operating conditions.\" (source_quote from new fact, page 7). This matches exactly the first historical fact, which also says the sector \"Stabilised in November with an index value of 50.0, indicating no overall change in operating conditions\" (source_quote, page 7). However, a second historical fact for the same month reports a different value: \"Global Manufacturing PMI was 56 in November 2024\" (source_quote, page 8). Since both facts refer to the same metric (global manufacturing PMI) and the same time period (November 2024) but give mutually exclusive index values (50.0 vs 56), they fundamentally disagree. Therefore there is a contradiction, flagged as true, while the new fact is corroborated by at least one historical fact.\nReconciler verdict: The new fact states: \"Following four months of gradual declines, the global manufacturing sector stabilised in November with an index value of 50.0, indicating no overall change in operating conditions.\" (source_quote from new fact, page 7). This matches the first historical fact, which also says the sector \"Stabilised in November with an index value of 50.0, indicating no overall change in operating conditions\" (source_quote, page 7 of 01-india-economic-survey-2024-25-excerpt.pdf).\n\nHowever, a second historical fact for the same month reports a different value: \"Global Manufacturing PMI was 56 in November 2024.\" (source_quote, page 8 of the same PDF). Both facts refer to the Global Manufacturing PMI for November 2024, yet they give mutually exclusive index values\u201450.0 versus 56.0. Because the same metric and time period cannot simultaneously have two different index values, the new fact directly conflicts with the second historical fact. Therefore the relationship is a genuine contradiction.\n\nThus, despite the new fact being corroborated by one historical entry, it contradicts another historical entry, leading to an overall classification of \"Contradiction\".",
+        "reasoning": "Skeptic flagged: - The first historical fact states: \"global economy in 2025 is likely to grow not only below its historical average (2000-19) of 3.7 per cent, but also below the growth of 3.3 per cent in 2024\" (page 6 of 02\u2011rbi\u2011annual\u2011report\u20112024\u201125\u2011excerpt.pdf). This explicitly says the 2025 growth will be **below 3.3\u202f%**, and therefore also below **3.7\u202f%**.\n- The third historical fact says: \"The global economy is projected to grow by 2.8 per cent in 2025 and 3.0 per cent in 2026 (3.3 per cent in 2024)\" (page 15 of 02\u2011rbi\u2011annual\u2011report\u20112024\u201125\u2011excerpt.pdf), giving a specific forecast of **2.8\u202f%** for 2025.\n- The new fact claims: \"The global economy in 2025 is likely to grow 3.7 per cent\" (page 6). This directly conflicts with both historical statements, which predict a growth rate well **below 3.3\u202f%** and specifically **2.8\u202f%**.\n\nBecause the new fact asserts a 2025 growth rate of 3.7\u202f% that is inconsistent with the established forecasts, it constitutes a contradiction. No historical fact supports the 3.7\u202f% figure, so there is no corroboration.\nReconciler verdict: - Historical Fact (Global Economic Growth - 2025 Outlook, page 6): \"global economy in 2025 is likely to grow not only below its historical average (2000-19) of 3.7 per cent, but also below the growth of 3.3 per cent in 2024\".\n- Historical Fact (Global Economic Growth, page 15): \"The global economy is projected to grow by 2.8 per cent in 2025 and 3.0 per cent in 2026 (3.3 per cent in 2024).\"\n- New Fact (page 6): \"The global economy in 2025 is likely to grow 3.7 per cent.\"\n\nThe historical sources explicitly state that the 2025 growth rate will be **below 3.3\u202f%** and give a specific forecast of **2.8\u202f%**. The new fact asserts a growth rate of **3.7\u202f%**, which is higher than both the historical average and the projected figure, creating a direct mismatch. No contextual difference (such as a different time frame, unit, or scope) can reconcile this discrepancy, so the relationship is a contradiction.",
         "retrieved_facts": [
             {
-                "fact": "Stabilised in November with an index value of 50.0, indicating no overall change in operating conditions",
-                "source_quote": "Following four months of gradual declines, the global manufacturing sector stabilised in November with an index value of 50.0, indicating no overall change in operating conditions.",
-                "time_period": "November 2024",
-                "source_pdf": "01-india-economic-survey-2024-25-excerpt.pdf",
-                "topic": "Global Manufacturing PMI",
-                "page_number": 7,
-                "distance": 0.06197512149810791
-            },
-            {
-                "topic": "Global Manufacturing PMI (Nov 2024)",
-                "fact": "Global Manufacturing PMI was 56 in November 2024.",
-                "time_period": "November 2024",
-                "source_quote": "Global Manufacturing PMI Global Services PMI Global Composite PMI 56 54 52 50",
-                "page_number": 8,
-                "source_pdf": "01-india-economic-survey-2024-25-excerpt.pdf",
-                "distance": 0.37711846828460693
-            },
-            {
-                "page_number": 7,
-                "source_quote": "By July 2024, weaker conditions pushed the PMI back into contraction.",
-                "source_pdf": "01-india-economic-survey-2024-25-excerpt.pdf",
-                "time_period": "July 2024",
-                "topic": "Global Manufacturing PMI",
-                "fact": "Weaker conditions pushed the PMI back into contraction",
-                "distance": 0.3870178461074829
-            }
-        ]
-    },
-    {
-        "fact": {
-            "topic": "US vs EU economic surprise",
-            "fact": "Between January 2023 and November 2024, data for the US economy continued to present more \u2018positive\u2019 surprises than the EU, compared to the analyst estimates.",
-            "time_period": "January 2023 \u2013 November 2024",
-            "source_quote": "Between January 2023 and November 2024, data for the US economy continued to present more \u2018positive\u2019 surprises than the EU, compared to the analyst estimates.",
-            "page_number": 7
-        },
-        "source_pdf": "01-india-economic-survey-2024-25-excerpt.pdf",
-        "status": "Corroborated",
-        "reasoning": "Skeptic confirmed alignment: The historical facts describe US economic growth expected to remain strong at 2.8% in 2024 (\"Growth in the US is expected to remain strong at 2.8 per cent in 2024 and may decline slightly in 2025\" \u2013 source_pdf: 01-india-economic-survey-2024-25-excerpt.pdf, page 6) and a dip in business sentiment in December 2024 (\"business sentiment dipping to a three-month low\" \u2013 same source, page 8). The new fact states that between January 2023 and November 2024 the US economy showed more 'positive' surprises than the EU (source_quote: \"Between January 2023 and November 2024, data for the US economy continued to present more \u2018positive\u2019 surprises than the EU, compared to the analyst estimates.\", page 7). There is no direct conflict: a strong growth forecast and occasional sentiment dip do not preclude the occurrence of positive data surprises relative to expectations. Moreover, the historical indication of strong growth supports the idea that US data could be delivering positive surprises, so the new fact is corroborated rather than contradicted.",
-        "retrieved_facts": [
-            {
+                "source_quote": "global economy in 2025 is likely to grow not only below its historical average (2000-19) of 3.7 per cent, but also below the growth of 3.3 per cent in 2024",
                 "page_number": 6,
-                "time_period": "2024-2025",
-                "topic": "United States economic growth",
-                "fact": "Growth in the US is expected to remain strong at 2.8% in 2024, with a slight decline anticipated in 2025.",
-                "source_quote": "Growth in the US is expected to remain strong at 2.8 per cent in 2024 and may decline slightly in 2025",
-                "source_pdf": "01-india-economic-survey-2024-25-excerpt.pdf",
-                "distance": 0.45642662048339844
-            },
-            {
-                "topic": "United States economic growth forecast",
-                "time_period": "2024-2025",
-                "fact": "Growth in the US is expected to remain strong at 2.8 per cent in 2024 and may decline slightly in 2025.",
-                "source_quote": "Growth in the US is expected to remain strong at 2.8 per cent in 2024 and may decline slightly in 2025",
-                "page_number": 6,
-                "source_pdf": "01-india-economic-survey-2024-25-excerpt.pdf",
-                "distance": 0.46418678760528564
-            },
-            {
-                "page_number": 8,
-                "time_period": "December 2024",
-                "fact": "Business sentiment dipped to a three-month low.",
-                "source_quote": "business sentiment dipping to a three-month low.",
-                "topic": "Business sentiment (Dec 2024)",
-                "source_pdf": "01-india-economic-survey-2024-25-excerpt.pdf",
-                "distance": 0.49825620651245117
-            }
-        ]
-    },
-    {
-        "fact": {
-            "topic": "Japan growth hindrance",
-            "fact": "Japan's growth was hindered by domestic supply disruptions in the early part of the year.",
-            "time_period": "Early 2024",
-            "source_quote": "Within Asia, Japan's growth was hindered by domestic supply disruptions in the early part of the year.",
-            "page_number": 7
-        },
-        "source_pdf": "01-india-economic-survey-2024-25-excerpt.pdf",
-        "status": "New Fact",
-        "reasoning": "Skeptic found facts to be unrelated: The new fact states: \"Within Asia, Japan's growth was hindered by domestic supply disruptions in the early part of the year\" (source_quote, page 7). The historical facts concern (1) trade risk impacts on financial conditions, (2) global economic growth percentages for 2024, and (3) sectoral YoY growth in power and food & public distribution in India. None of these historical facts mention Japan, domestic supply disruptions, or the early\u20112024 period for Japan. Therefore there is no direct conflict or contradiction, and the new fact is unrelated to the provided historical facts, resulting in no corroboration either.",
-        "retrieved_facts": [
-            {
-                "time_period": "near term",
-                "topic": "Near-term trade risk",
-                "fact": "Further escalation of trade tensions could lead to tighter financial conditions, higher input costs, and lower trade, FDI, and economic growth",
-                "source_pdf": "03-imf-india-2025-article-iv-excerpt.pdf",
-                "source_quote": "On the downside, further escalation of trade tensions and deepening of geoeconomic fragmentation could lead to tighter financial conditions, higher input costs, and lower trade, FDI, and economic growth",
-                "page_number": 14,
-                "distance": 0.5909080505371094
-            },
-            {
-                "page_number": 7,
-                "time_period": "2024",
-                "source_quote": "global growth at 3.3 per cent in 2024 (3.5 per cent a year ago) was below the historical average (2000-19) of 3.7 per cent",
-                "fact": "Global growth was 3.3% in 2024, down from 3.5% in 2023 and below the 2000-19 historical average of 3.7%.",
-                "topic": "Global Economic Growth",
+                "topic": "Global Economic Growth - 2025 Outlook",
+                "fact": "Global economy in 2025 is expected to grow below 3.3 percent and below the historical average of 3.7 percent.",
                 "source_pdf": "02-rbi-annual-report-2024-25-excerpt.pdf",
-                "distance": 0.5974701046943665
+                "time_period": "2025",
+                "distance": 0.08962076902389526
             },
             {
-                "topic": "Sectoral YoY Growth in Capital Expenditure",
-                "source_quote": "significant YoY growth occurred in power and food and public distribution",
                 "source_pdf": "01-india-economic-survey-2024-25-excerpt.pdf",
-                "fact": "Significant year\u2011on\u2011year growth was observed in power and food & public distribution sectors.",
-                "time_period": "Until November 2024",
-                "page_number": 24,
-                "distance": 0.6096135973930359
+                "source_quote": "The global economy grew by 3.3 per cent in 2023.",
+                "topic": "Global economic growth 2023",
+                "page_number": 5,
+                "fact": "The global economy grew by 3.3 per cent in 2023.",
+                "time_period": "2023",
+                "distance": 0.1434881091117859
+            },
+            {
+                "topic": "Global Economic Growth",
+                "source_quote": "The global economy is projected to grow by 2.8 per cent in 2025 and 3.0 per cent in 2026 (3.3 per cent in 2024).",
+                "fact": "Growth of 2.8% in 2025, 3.0% in 2026 (3.3% in 2024)",
+                "time_period": "2025-2026",
+                "source_pdf": "02-rbi-annual-report-2024-25-excerpt.pdf",
+                "page_number": 15,
+                "distance": 0.1487501859664917
             }
         ]
     },
     {
         "fact": {
-            "topic": "China growth weakening",
-            "fact": "China\u2019s growth weakened after the first quarter, affected by sluggish private consumption and investment, alongside challenges in the real estate sector.",
-            "time_period": "After Q1 2024",
-            "source_quote": "China\u2019s growth weakened after the first quarter, affected by sluggish private consumption and investment, alongside challenges in the real estate sector.",
-            "page_number": 7
+            "topic": "Global Economic Growth Comparison",
+            "fact": "The forecasted growth of 3.7 per cent is below the growth of 3.3 per cent.",
+            "time_period": "2025",
+            "source_quote": "3.3 per cent",
+            "page_number": 6
         },
-        "source_pdf": "01-india-economic-survey-2024-25-excerpt.pdf",
-        "status": "New Fact",
-        "reasoning": "Skeptic found facts to be unrelated: The historical facts pertain to private consumption growth in India (\"Private consumption growth was buoyant at 7.2 percent on increasing rural demand and stable urban demand\" \u2013 source_pdf: 03-imf-india-2025-article-iv-excerpt.pdf, page 10), Japan's growth being hindered by domestic supply disruptions (\"Within Asia, Japan's growth was hindered by domestic supply disruptions in the early part of the year\" \u2013 source_pdf: 01-india-economic-survey-2024-25-excerpt.pdf, page 7), and US economic growth expectations (\"Growth in the US is expected to remain strong at 2.8 per cent in 2024 and may decline slightly in 2025\" \u2013 source_pdf: 01-india-economic-survey-2024-25-excerpt.pdf, page 6). The new fact concerns China\u2019s growth weakening after Q1 2024 due to sluggish private consumption and investment (\"China\u2019s growth weakened after the first quarter, affected by sluggish private consumption and investment, alongside challenges in the real estate sector\" \u2013 page 7). Since the entities (India, Japan, United States vs. China) and the time periods do not overlap, there is no direct conflict or contradiction. Additionally, the new fact does not align with or support any of the historical facts, as they discuss different countries and economic contexts. Therefore, there is no contradiction and no corroboration.",
+        "source_pdf": "02-rbi-annual-report-2024-25-excerpt.pdf",
+        "status": "Contradiction",
+        "reasoning": "Skeptic flagged: - The historical data states that \"global growth at 3.3 per cent in 2024 (3.5 per cent a year ago) was below the historical average (2000-19) of 3.7 per cent\" (02-rbi-annual-report-2024-25-excerpt.pdf, p.7).\n- It also states that \"The global economy in 2025 is likely to grow 3.7 per cent\" (02-rbi-annual-report-2024-25-excerpt.pdf, p.6).\n- The new fact claims \"The forecasted growth of 3.7 per cent is **below** the growth of 3.3 per cent,\" which directly contradicts the numbers above because 3.7\u202f% is higher, not lower, than 3.3\u202f%.\n- Therefore the new fact conflicts with the historical facts and is not supported by any of them.\nReconciler verdict: - Historical Fact (2024 growth, page 7): \"global growth at 3.3 per cent in 2024 (3.5 per cent a year ago) was below the historical average (2000-19) of 3.7 per cent.\"\n- Historical Fact (2025 forecast, page 6): \"The global economy in 2025 is likely to grow 3.7 per cent.\"\n- New Fact (page 6): \"The forecasted growth of 3.7 per cent is below the growth of 3.3 per cent.\"\n\nThe historical data clearly shows that the forecast for 2025 (3.7\u202f%) is higher than the actual 2024 growth (3.3\u202f%). The new fact incorrectly states that 3.7\u202f% is *below* 3.3\u202f%, which directly contradicts the numbers provided in the historical sources.",
         "retrieved_facts": [
             {
-                "topic": "Private Consumption",
-                "source_quote": "Private consumption growth was buoyant at 7.2 percent on increasing rural demand and stable urban demand.",
-                "fact": "Private consumption growth was buoyant at 7.2 percent on increasing rural demand and stable urban demand.",
-                "time_period": "FY2024/25",
-                "source_pdf": "03-imf-india-2025-article-iv-excerpt.pdf",
-                "page_number": 10,
-                "distance": 0.5235580205917358
-            },
-            {
-                "source_pdf": "01-india-economic-survey-2024-25-excerpt.pdf",
-                "time_period": "Early 2024",
-                "fact": "Japan's growth was hindered by domestic supply disruptions in the early part of the year.",
+                "time_period": "2024 (compared to 2023 and 2000-19 average)",
+                "fact": "Global growth at 3.3 per cent in 2024 (3.5 per cent a year ago) was below the historical average (2000-19) of 3.7 per cent",
+                "source_pdf": "02-rbi-annual-report-2024-25-excerpt.pdf",
                 "page_number": 7,
-                "source_quote": "Within Asia, Japan's growth was hindered by domestic supply disruptions in the early part of the year.",
-                "topic": "Japan growth hindrance",
-                "distance": 0.5239819884300232
+                "source_quote": "global growth at 3.3 per cent in 2024 (3.5 per cent a year ago) was below the historical average (2000-19) of 3.7 per cent",
+                "topic": "Global economic growth",
+                "distance": 0.16660815477371216
             },
             {
-                "source_quote": "Growth in the US is expected to remain strong at 2.8 per cent in 2024 and may decline slightly in 2025",
-                "topic": "United States economic growth",
+                "fact": "The global economy in 2025 is likely to grow 3.7 per cent.",
                 "page_number": 6,
-                "time_period": "2024-2025",
-                "fact": "Growth in the US is expected to remain strong at 2.8% in 2024, with a slight decline anticipated in 2025.",
-                "source_pdf": "01-india-economic-survey-2024-25-excerpt.pdf",
-                "distance": 0.5358690023422241
+                "time_period": "2025",
+                "topic": "Global Economic Growth Forecast",
+                "source_pdf": "02-rbi-annual-report-2024-25-excerpt.pdf",
+                "source_quote": "3.7 per cent",
+                "distance": 0.1934819221496582
+            },
+            {
+                "source_pdf": "02-rbi-annual-report-2024-25-excerpt.pdf",
+                "fact": "Global growth was 3.3% in 2024, down from 3.5% in 2023 and below the 2000-19 historical average of 3.7%.",
+                "source_quote": "global growth at 3.3 per cent in 2024 (3.5 per cent a year ago) was below the historical average (2000-19) of 3.7 per cent",
+                "topic": "Global Economic Growth",
+                "time_period": "2024",
+                "page_number": 7,
+                "distance": 0.24459624290466309
             }
         ]
     }

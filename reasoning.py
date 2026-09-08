@@ -18,11 +18,11 @@ def evaluate_fact_with_skeptic(client, model_name, new_fact, retrieved_facts, ma
         "or they present mutually exclusive realities. "
         "If they are completely unrelated (e.g., different time periods, different metrics), do NOT flag it. "
         "If they agree and support each other, do NOT flag it.\n"
-        "IMPORTANT: When explaining your reasoning, you MUST explicitly quote the exact source texts (using the provided 'source_quote', 'source_pdf', and 'page_number') from both the new fact and the historical fact(s) to justify your decision.\n"
+        "IMPORTANT: When explaining your reasoning, you MUST explicitly quote the exact source texts to justify your decision. Format your quotes as a clear, user-friendly markdown list. Do NOT use raw technical attribute names like 'source_quote', 'source_pdf', or 'page_number' in your text. Instead, write naturally and cite them cleanly (e.g., '- According to page 4 of [Document Name]: \"...\"').\n"
         "You MUST return ONLY a valid JSON object with EXACTLY these keys:\n"
         "- 'flagged' (boolean: true if there is a contradiction or likely contradiction, false otherwise)\n"
         "- 'is_corroborated' (boolean: true if at least one historical fact aligns with and supports the new fact, false if they are unrelated or contradict)\n"
-        "- 'reasoning' (string: detailed explanation of your decision including exact source quotes)."
+        "- 'reasoning' (string: detailed explanation of your decision including cleanly formatted source quotes)."
     )
     
     clean_history = []
@@ -93,9 +93,9 @@ def reconcile_fact(client, model_name, new_fact, retrieved_facts, skeptic_reason
         "1. 'Corroborated': The facts actually align and agree, even if phrased differently. The Skeptic was wrong to flag it.\n"
         "2. 'Contradiction': There is a genuine mismatch and disagreement that cannot be explained.\n"
         "3. 'Reconciled by Context': The apparent contradiction is explained by a difference in time, scope, units, or context.\n\n"
-        "IMPORTANT: When explaining your verdict, especially for 'Contradiction' or 'Reconciled by Context', you MUST explicitly quote the exact source texts (using the provided 'source_quote', 'source_pdf', and 'page_number') from both the new fact and the historical fact(s) to justify where they contradict or how context resolves it.\n"
+        "IMPORTANT: When explaining your verdict, especially for 'Contradiction' or 'Reconciled by Context', you MUST explicitly quote the exact source texts from both the new fact and the historical fact(s). Format these comparisons as a clear, user-friendly markdown list. Do NOT use raw technical attribute names like 'source_quote', 'source_pdf', or 'page_number' in your text. Instead, write naturally and cite them cleanly (e.g., '- Historical Fact (Page 4): \"...\"' vs '- New Fact (Page 6): \"...\"').\n"
         "You MUST return ONLY a valid JSON object with EXACTLY these keys: "
-        "'status' (string: strictly one of 'Corroborated', 'Contradiction', 'Reconciled by Context') and 'reasoning' (string: detailed explanation of your final verdict including exact source quotes)."
+        "'status' (string: strictly one of 'Corroborated', 'Contradiction', 'Reconciled by Context') and 'reasoning' (string: detailed explanation of your final verdict including cleanly formatted source quotes)."
     )
     
     clean_history = []
