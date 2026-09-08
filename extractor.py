@@ -109,6 +109,7 @@ def extract_facts_from_chunk(client, chunk, model_name, max_retries=5):
                 model=model_name,
                 messages=messages,
                 temperature=0.0,
+                max_tokens=8192, # prevents JSON truncation on dense tables
             )
             
             raw_text = response.choices[0].message.content.strip()

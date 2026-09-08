@@ -2,4 +2,5 @@
 sample.pdf
 extracted_facts.json
 starter-datasets/
+chroma_db/
 superjoin-vit-2026-assignment.pdf
