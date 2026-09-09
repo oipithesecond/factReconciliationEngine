@@ -32,7 +32,7 @@ python -m streamlit run app.py
 
 ## Video Demo
 
-**[[YouTube Demo Link](https://github.com/oipithesecond/factReconciliationEngine)]**
+**[YouTube Demo Link](https://www.youtube.com/watch?v=tMikT79sOOc)**
 
 *(The 3-minute demo covers the live processing of a new PDF and walks through the four required cases: Corroboration, Contradiction, Contextual Reconciliation, and Failure Handling).*
 
