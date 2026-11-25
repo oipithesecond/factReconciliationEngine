@@ -2,7 +2,7 @@
 
 A multi-agent retrieval-augmented generation (RAG) system that extracts, grounds, and dynamically reconciles facts across multiple PDFs.
 
-Rather than treating extraction as a basic text-to-JSON pipe, this system uses a multi-step reasoning pipeline to ensure facts are contextually accurate, strictly traceable to exact quotes, and logically cross-referenced against historical knowledge.
+Rather than treating extraction as a basic text-to-JSON pipe, this system uses a multi-step reasoning pipeline to ensure facts are contextually accurate, strictly traceable to verified quotes, and logically cross-referenced against historical knowledge.
 
 ## Setup and Run
 
@@ -14,13 +14,13 @@ pip install -r requirements.txt
 ```
 
 **2. API Configuration:**
-Copy `.env.example` to `.env` in the root directory and add an API key. The system auto-detects your provider based on the key you supply:
+Copy `.env.example` to `.env` in the root directory and add an API key. Provider and model selection is handled in `config.py`, which auto-detects your provider based on the key you supply:
 
 ```env
 # .env
 RAPIDROUTER_API_KEY=your_api_key_here
 ```
-*(Alternatively, you can provide a `GROQ_API_KEY` or an `OPENAI_API_KEY` instead, and the system will automatically configure itself without requiring any code changes.)*
+*(Alternatively, you can provide a `GROQ_API_KEY` or an `OPENAI_API_KEY` instead, or override defaults using `LLM_PROVIDER` and `LLM_MODEL`.)*
 
 **3. Run the Dashboard:**
 ```bash
@@ -29,39 +29,41 @@ python -m streamlit run app.py
 
 Runtime files (ChromaDB vectors and extracted/dashboard JSON records) are stored locally under `data/` (gitignored).
 
-## Demo
-
-**[YouTube Walkthrough](https://www.youtube.com/watch?v=tMikT79sOOc)**
-
-*(Covers live PDF processing and examples of Corroboration, Contradiction, Contextual Reconciliation, and Failure Handling.)*
-
 ## Architecture
 
 The pipeline is built on Python, Streamlit, `pdfplumber`, and a persistent local ChromaDB instance:
 
-### 1. Extraction Pipeline & Data Grounding
-* **Page-Level Context Summarization (Signal vs. Noise):** Financial and economic PDFs contain significant structural noise (Tables of Contents, disclaimers, glossaries). The extractor defines a "fact" as a meaningful quantitative metric, historical data point, or definitive business/economic statement and skips structural pages. Before extracting facts, it generates a brief `page_analysis` summary to separate signal from noise.
+### 1. Extraction Pipeline & Data Grounding (`extractor.py`)
+* **Page-Level Context Summarization (Signal vs. Noise):** Financial and economic PDFs contain significant structural noise (Tables of Contents, disclaimers, glossaries). The extractor defines a "fact" as a meaningful quantitative metric, historical data point, or definitive business/economic statement and skips structural pages, generating a brief `page_analysis` summary before extraction.
 * **Overlapping Context Chunking (Sliding Window):** To prevent facts from being split across page breaks, the extractor passes the last 500 characters of the *previous* page as context when analyzing the *current* page.
-* **Table-to-Markdown Injection:** Raw PDF text extraction breaks table layouts. `pdfplumber` identifies tabular grids, converts them into Markdown tables, and injects them alongside the page text.
-* **Strict Traceability:** Every extracted fact includes an exact substring `source_quote` and `page_number`.
+* **Table-to-Markdown Injection:** `pdfplumber` identifies tabular grids, converts them into Markdown tables, and injects them alongside the page text so tabular metrics retain their structure.
+* **Programmatic Quote Verification:** Every extracted fact includes a `source_quote` and `page_number`, and `verify_source_quote()` programmatically verifies (with whitespace normalization) that the quote appears in the source text, surfacing a `Quote Verified` / `Quote Unverified` indicator in the UI.
 
-### 2. Multi-Agent Reasoning Engine
-Reconciliation is split across two focused agents to reduce token usage and improve accuracy:
-* **Skeptic Agent:** Queries ChromaDB for similar historical facts and acts as a devil's advocate, flagging anything that looks like a potential conflict or confirming alignment.
+### 2. Vector Memory & Deduplication (`memory.py`)
+* **Local Embeddings & Persistence:** Uses `all-MiniLM-L6-v2` embeddings in a persistent ChromaDB store (`data/chroma_db`).
+* **Deterministic Deduplication:** Facts are keyed by a SHA-256 hash of `(source_pdf, page_number, fact)` and stored via `upsert`, preventing duplicate entries when re-processing documents.
+* **Lifecycle Management:** Supports deleting facts by source PDF or resetting the collection.
+
+### 3. Multi-Agent Reasoning Engine (`reasoning.py`)
+Reconciliation is split across two focused agents using structured JSON completions (`config.py`):
+* **Skeptic Agent:** Queries ChromaDB for similar historical facts and acts as a devil's advocate, flagging potential conflicts or confirming alignment.
 * **Reconciler Agent:** Invoked only when the Skeptic flags an issue. It compares time periods, scopes, and units to classify the relationship as **Corroborated**, **Contradiction**, or **Reconciled by Context**.
 
-### 3. Rate-Limit Awareness & Fault Tolerance
-* **Configurable Throttling:** The UI provides controls for **Max Pages to Process** and **API Delay between facts** to avoid `429 RateLimit` errors on rate-limited API plans.
-* **Graceful Failure Handling:** If an LLM call fails to return valid JSON after retries, the system catches the error, logs it under the **Failure** tab in the dashboard, and continues processing the rest of the document.
-* **Real-Time UI Logging:** Terminal-style logging in the Streamlit UI streams chunking, extraction, and agent progress live.
+### 4. Dashboard & Processing Controls (`app.py`)
+* **Concurrent Extraction & Throttling:** Supports parallel page extraction via `ThreadPoolExecutor` (configurable worker count), per-PDF page limits, and configurable API delays to avoid rate-limit errors.
+* **Batched Persistence & Fault Tolerance:** Saves extracted and reconciled records once per page, and logs JSON/API failures under the **Failure** tab without halting the batch.
+* **Knowledge Dashboard:** Displays KPI summary metrics, full-text search across topics/facts/quotes/reasoning, source PDF filtering, JSON/CSV export of filtered results, and Knowledge Base management (per-PDF deletion or full reset).
 
 ## Limitations and Roadmap
 
 **Current Limitations:**
-* **Sequential Processing:** Processing large (100+ page) PDFs sequentially takes time due to table extraction and per-fact agent calls.
+* **Sequential Per-Fact Reconciliation:** While page extraction runs concurrently, facts are reconciled sequentially against ChromaDB so each fact can reference earlier facts from the same run.
 * **Complex Multi-Page Tables:** Highly nested financial tables spanning multiple pages can occasionally challenge strict JSON extraction.
 
 **Planned Improvements:**
-* **Async & Batch Processing:** Transition page chunking and LLM calls to `asyncio` for concurrent processing.
 * **Knowledge Graph Integration:** Complement ChromaDB semantic search with a graph store (e.g., Neo4j) for multi-hop reasoning across entities and time periods.
 * **Dynamic Topic Clustering:** Cluster related topics in the UI to prevent metadata fragmentation.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
