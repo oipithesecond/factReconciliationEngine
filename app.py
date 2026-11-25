@@ -13,8 +13,9 @@ load_dotenv()
 # Initialize Streamlit configuration
 st.set_page_config(page_title="Fact Reconciliation Engine", layout="wide")
 
-# Persistent data file for the dashboard
-DASHBOARD_DATA_FILE = "dashboard_data.json"
+# Persistent data files for the dashboard
+DASHBOARD_DATA_FILE = "data/dashboard_data.json"
+EXTRACTED_FACTS_FILE = "data/extracted_facts.json"
 
 def load_dashboard_data():
     if os.path.exists(DASHBOARD_DATA_FILE):
@@ -26,20 +27,22 @@ def load_dashboard_data():
     return []
 
 def save_dashboard_data(data):
+    os.makedirs(os.path.dirname(DASHBOARD_DATA_FILE), exist_ok=True)
     with open(DASHBOARD_DATA_FILE, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=4)
 
 def load_extracted_facts():
-    if os.path.exists("extracted_facts.json"):
+    if os.path.exists(EXTRACTED_FACTS_FILE):
         try:
-            with open("extracted_facts.json", "r", encoding="utf-8") as f:
+            with open(EXTRACTED_FACTS_FILE, "r", encoding="utf-8") as f:
                 return json.load(f)
         except Exception:
             return []
     return []
 
 def save_extracted_facts(data):
-    with open("extracted_facts.json", "w", encoding="utf-8") as f:
+    os.makedirs(os.path.dirname(EXTRACTED_FACTS_FILE), exist_ok=True)
+    with open(EXTRACTED_FACTS_FILE, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=4)
 
 def get_client_and_model():

@@ -1,65 +1,67 @@
 # Fact Reconciliation Engine
 
-A multi-agent retrieval-augmented generation (RAG) system that extracts, grounds, and dynamically reconciles facts across multiple PDFs. 
+A multi-agent retrieval-augmented generation (RAG) system that extracts, grounds, and dynamically reconciles facts across multiple PDFs.
 
-Rather than treating extraction as a basic text-to-JSON pipe, this system utilizes a multi-step reasoning pipeline to ensure facts are contextually accurate, strictly traceable to exact quotes, and logically cross-referenced against historical knowledge.
+Rather than treating extraction as a basic text-to-JSON pipe, this system uses a multi-step reasoning pipeline to ensure facts are contextually accurate, strictly traceable to exact quotes, and logically cross-referenced against historical knowledge.
 
-## Setup and Run Instructions
-
-This project is designed to be evaluated immediately. The local `chroma_db` vector database containing the processed vectors from the starter PDFs is pre-committed to this repository, meaning **you do not need to wait for the initial documents to process.**
+## Setup and Run
 
 **1. Clone and Install Dependencies:**
 ```bash
 git clone <repo-url>
-cd <repo-name>
+cd factReconciliationEngine
 pip install -r requirements.txt
 ```
 
 **2. API Configuration:**
-Create a `.env` file in the root directory. The system is designed to seamlessly auto-detect your provider based on the key you supply, making it incredibly easy for you to test.
+Copy `.env.example` to `.env` in the root directory and add an API key. The system auto-detects your provider based on the key you supply:
 
-You can use a RapidRouter API key (OpenAI compatible):
 ```env
 # .env
 RAPIDROUTER_API_KEY=your_api_key_here
 ```
-*(Alternatively, you can provide a `GROQ_API_KEY` or an `OPENAI_API_KEY` instead, and the system will automatically configure itself without requiring any code changes).*
+*(Alternatively, you can provide a `GROQ_API_KEY` or an `OPENAI_API_KEY` instead, and the system will automatically configure itself without requiring any code changes.)*
 
 **3. Run the Dashboard:**
 ```bash
-python -m streamlit run app.py   
+python -m streamlit run app.py
 ```
 
-## Approach
+Runtime files (ChromaDB vectors and extracted/dashboard JSON records) are stored locally under `data/` (gitignored).
 
-The architecture is built on Python, Streamlit, and a persistent local ChromaDB instance. To solve the notorious unreliability of basic PDF parsing and LLM extraction, I implemented several advanced mechanisms:
+## Demo
+
+**[YouTube Walkthrough](https://www.youtube.com/watch?v=tMikT79sOOc)**
+
+*(Covers live PDF processing and examples of Corroboration, Contradiction, Contextual Reconciliation, and Failure Handling.)*
+
+## Architecture
+
+The pipeline is built on Python, Streamlit, `pdfplumber`, and a persistent local ChromaDB instance:
 
 ### 1. Extraction Pipeline & Data Grounding
-* **Page-Level Context Summarization (Signal vs. Noise):** Financial PDFs are full of noise (e.g., Tables of Contents, disclaimers, glossary terms). The system is strictly instructed to define a "fact" as a meaningful quantitative metric, historical data point, or definitive business/economic statement, and expressly skip structural pages. Before extracting these facts, the Extractor LLM is forced to generate a brief "Page Analysis" summarizing what the page means. Facts are then extracted against this context to ensure they are high-signal, drastically reducing hallucinations.
-* **Overlapping Context Chunking (The Sliding Window):** To prevent facts from being cut in half at page breaks, the extractor passes the last 500 characters of the *previous* page as context when analyzing the *current* page.
-* **Table-to-Markdown Injection:** Raw PDF text extraction destroys table layouts. The script uses `pdfplumber` to explicitly identify tabular grids, converts them into clean Markdown tables, and injects them alongside the text. This allows the LLM to cleanly understand dense financial metrics.
-* **Strict Traceability:** Every single extracted fact is required to return the **exact substring quote** and **page number**, ensuring 0% ungrounded hallucinations.
+* **Page-Level Context Summarization (Signal vs. Noise):** Financial and economic PDFs contain significant structural noise (Tables of Contents, disclaimers, glossaries). The extractor defines a "fact" as a meaningful quantitative metric, historical data point, or definitive business/economic statement and skips structural pages. Before extracting facts, it generates a brief `page_analysis` summary to separate signal from noise.
+* **Overlapping Context Chunking (Sliding Window):** To prevent facts from being split across page breaks, the extractor passes the last 500 characters of the *previous* page as context when analyzing the *current* page.
+* **Table-to-Markdown Injection:** Raw PDF text extraction breaks table layouts. `pdfplumber` identifies tabular grids, converts them into Markdown tables, and injects them alongside the page text.
+* **Strict Traceability:** Every extracted fact includes an exact substring `source_quote` and `page_number`.
 
 ### 2. Multi-Agent Reasoning Engine
-Instead of relying on one massive, expensive prompt, the reconciliation logic is split into a "separation of concerns" to save tokens and improve reasoning:
-* **The Skeptic Agent:** Acts purely as a devil's advocate. It queries ChromaDB and aggressively flags *anything* that looks like a potential conflict between a new fact and historical facts.
-* **The Reconciler Agent:** Only invoked if the Skeptic flags an issue. It acts as the judge, analyzing time, scope, and unit contexts to categorize the relationship as a genuine *Contradiction* or successfully *Reconciled by Context*.
+Reconciliation is split across two focused agents to reduce token usage and improve accuracy:
+* **Skeptic Agent:** Queries ChromaDB for similar historical facts and acts as a devil's advocate, flagging anything that looks like a potential conflict or confirming alignment.
+* **Reconciler Agent:** Invoked only when the Skeptic flags an issue. It compares time periods, scopes, and units to classify the relationship as **Corroborated**, **Contradiction**, or **Reconciled by Context**.
 
-### 3. Production & Rate-Limit Awareness
-* **Free-Tier Resilience:** To ensure the app can run on free-tier API accounts (which have strict RPM/TPM limits), the UI includes configurable sliders for **"Max Pages to Process"** (for testing) and **"API Delay between facts"**. This gives you complete control to throttle requests and prevent `429 RateLimit` crashes when batch-processing large PDFs.
+### 3. Rate-Limit Awareness & Fault Tolerance
+* **Configurable Throttling:** The UI provides controls for **Max Pages to Process** and **API Delay between facts** to avoid `429 RateLimit` errors on rate-limited API plans.
+* **Graceful Failure Handling:** If an LLM call fails to return valid JSON after retries, the system catches the error, logs it under the **Failure** tab in the dashboard, and continues processing the rest of the document.
+* **Real-Time UI Logging:** Terminal-style logging in the Streamlit UI streams chunking, extraction, and agent progress live.
 
-## Limitations and Next Steps
+## Limitations and Roadmap
 
-**Limitations:**
-* **Processing Speed:** While Groq is incredibly fast, processing 100+ page PDFs sequentially still takes time due to the dense table extraction and two-step reasoning per fact. 
-* **Complex Multi-Table Context:** While the Table-to-Markdown injection works beautifully for standard tables, highly complex, nested financial tables spanning multiple pages can occasionally confuse the strict JSON schema.
+**Current Limitations:**
+* **Sequential Processing:** Processing large (100+ page) PDFs sequentially takes time due to table extraction and per-fact agent calls.
+* **Complex Multi-Page Tables:** Highly nested financial tables spanning multiple pages can occasionally challenge strict JSON extraction.
 
-**Next Steps (What I would build next):**
-* **Async & Batch Processing:** I would transition the chunk processing and LLM calls to `asyncio` to process pages in parallel, drastically cutting down upload wait times.
-* **Graph Database Integration:** While ChromaDB handles the semantic search well, linking the finalized Corroborated/Contradictory facts into a Neo4j knowledge graph would allow for much deeper "multi-hop" reasoning across entities (e.g., tracking a specific subsidiary's revenue across 5 years).
-* **Dynamic Schema Evolution:** Allowing the LLM to propose new "Topics" dynamically and cluster similar topics in the UI to prevent metadata fragmentation.
-
-## Additional Notes
-
-* **Graceful Failure Handling:** In instances where the LLM fails to output valid JSON (e.g., dense Table of Contents pages) or hallucinates a quote, the system catches the `JSONDecodeError`. Instead of crashing, it flags the instance as a "Failure" in the UI (Case #4) and gracefully continues processing the rest of the document.
-* **Real-Time UI Logging:** To solve the UX issue of Streamlit "hanging" during long processes, the UI features real-time terminal-style logging, allowing you to watch the chunking, extracting, and reasoning agents work in real-time.
+**Planned Improvements:**
+* **Async & Batch Processing:** Transition page chunking and LLM calls to `asyncio` for concurrent processing.
+* **Knowledge Graph Integration:** Complement ChromaDB semantic search with a graph store (e.g., Neo4j) for multi-hop reasoning across entities and time periods.
+* **Dynamic Topic Clustering:** Cluster related topics in the UI to prevent metadata fragmentation.

@@ -177,7 +177,7 @@ if __name__ == "__main__":
         exit(1)
         
     pdf_file = "sample.pdf" 
-    output_file = "extracted_facts.json"
+    output_file = "data/extracted_facts.json"
 
     all_extracted_facts = []
     processed_pages = set()
@@ -205,6 +205,7 @@ if __name__ == "__main__":
             all_extracted_facts.extend(page_facts)
             processed_pages.add(p_num)
 
+            os.makedirs(os.path.dirname(output_file), exist_ok=True)
             with open(output_file, "w", encoding="utf-8") as f:
                 json.dump(all_extracted_facts, f, indent=4)
 

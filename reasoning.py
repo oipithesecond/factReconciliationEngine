@@ -165,7 +165,7 @@ def reconcile_fact(client, model_name, new_fact, retrieved_facts, skeptic_reason
 
 def process_fact_with_agents(client, model_name, new_fact, memory):
     """
-    Main pipeline for Phase 3:
+    Reconcile a newly extracted fact against historical facts in memory:
     1. Query memory for top 3 similar facts
     2. Run Skeptic Agent
     3. Run Reconciler Agent (if flagged)

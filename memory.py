@@ -4,7 +4,7 @@ import chromadb
 from chromadb.utils import embedding_functions
 
 class FactMemory:
-    def __init__(self, db_path="./chroma_db", collection_name="facts"):
+    def __init__(self, db_path="./data/chroma_db", collection_name="facts"):
         """
         Initializes the ChromaDB persistent client and collection.
         Uses the default embedding function (all-MiniLM-L6-v2) which runs locally.
@@ -96,8 +96,9 @@ if __name__ == "__main__":
     memory = FactMemory()
     
     # if we have extracted facts to ingest
-    if os.path.exists("extracted_facts.json"):
-        with open("extracted_facts.json", "r", encoding="utf-8") as f:
+    facts_file = "data/extracted_facts.json"
+    if os.path.exists(facts_file):
+        with open(facts_file, "r", encoding="utf-8") as f:
             facts = json.load(f)
             
         print(f"Found {len(facts)} facts in extracted_facts.json. Ingesting...")

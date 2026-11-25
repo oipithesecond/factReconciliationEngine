@@ -1,7 +1,5 @@
 .env
+data/
 sample.pdf
 starter-datasets/
 __pycache__/
-superjoin-vit-2026-assignment.pdf
-extract.py
-all_requests.txt
