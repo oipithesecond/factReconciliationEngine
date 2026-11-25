@@ -1,5 +1,5 @@
+import hashlib
 import os
-import uuid
 import chromadb
 from chromadb.utils import embedding_functions
 
@@ -36,8 +36,9 @@ class FactMemory:
         ids = []
 
         for fact in facts:
-            # create unique ID for the fact
-            fact_id = str(uuid.uuid4())
+            # Deterministic ID based on source, page, and fact text to prevent duplicates
+            raw_key = f"{source_pdf}|{fact.get('page_number', -1)}|{fact.get('fact', '')}"
+            fact_id = hashlib.sha256(raw_key.encode("utf-8")).hexdigest()
             
             # the document text will be the fact itself (or combination of topic + fact)
             # this is what will be embedded and searched against.
@@ -60,13 +61,27 @@ class FactMemory:
             metadatas.append(metadata)
             ids.append(fact_id)
 
-        # Add to collection
-        self.collection.add(
+        # Upsert to collection so re-processing the same PDF does not create duplicates
+        self.collection.upsert(
             documents=documents,
             metadatas=metadatas,
             ids=ids
         )
         print(f"Stored {len(facts)} facts from {source_pdf} into memory.")
+
+    def delete_by_source(self, source_pdf: str):
+        """Delete all stored facts originating from a specific source PDF."""
+        if self.collection.count() == 0:
+            return
+        self.collection.delete(where={"source_pdf": source_pdf})
+
+    def clear_all(self):
+        """Delete and recreate the facts collection to reset memory."""
+        self.client.delete_collection(name=self.collection_name)
+        self.collection = self.client.get_or_create_collection(
+            name=self.collection_name,
+            embedding_function=self.embedding_fn
+        )
 
     def search_similar_facts(self, query_text: str, n_results: int = 5):
         """

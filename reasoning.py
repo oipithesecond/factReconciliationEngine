@@ -1,6 +1,7 @@
 import os
 import json
 import time
+from config import create_json_completion
 
 def evaluate_fact_with_skeptic(client, model_name, new_fact, retrieved_facts, max_retries=3):
     """
@@ -54,25 +55,7 @@ def evaluate_fact_with_skeptic(client, model_name, new_fact, retrieved_facts, ma
     
     for attempt in range(max_retries):
         try:
-            response = client.chat.completions.create(
-                model=model_name,
-                messages=messages,
-                temperature=0.0
-            )
-            raw_text = response.choices[0].message.content.strip()
-            
-            # parse JSON
-            if "```json" in raw_text:
-                raw_text = raw_text.split("```json")[1].split("```")[0].strip()
-            elif "```" in raw_text:
-                raw_text = raw_text.split("```")[1].split("```")[0].strip()
-                
-            start_idx = raw_text.find('{')
-            end_idx = raw_text.rfind('}')
-            if start_idx != -1 and end_idx != -1:
-                raw_text = raw_text[start_idx:end_idx+1]
-                
-            data = json.loads(raw_text)
+            data = create_json_completion(client, model_name, messages, temperature=0.0)
             if "flagged" not in data or "reasoning" not in data:
                 raise ValueError("Missing keys in Skeptic output")
             return data
@@ -127,25 +110,7 @@ def reconcile_fact(client, model_name, new_fact, retrieved_facts, skeptic_reason
     
     for attempt in range(max_retries):
         try:
-            response = client.chat.completions.create(
-                model=model_name,
-                messages=messages,
-                temperature=0.0
-            )
-            raw_text = response.choices[0].message.content.strip()
-            
-            # parse JSON
-            if "```json" in raw_text:
-                raw_text = raw_text.split("```json")[1].split("```")[0].strip()
-            elif "```" in raw_text:
-                raw_text = raw_text.split("```")[1].split("```")[0].strip()
-                
-            start_idx = raw_text.find('{')
-            end_idx = raw_text.rfind('}')
-            if start_idx != -1 and end_idx != -1:
-                raw_text = raw_text[start_idx:end_idx+1]
-                
-            data = json.loads(raw_text)
+            data = create_json_completion(client, model_name, messages, temperature=0.0)
             if "status" not in data or "reasoning" not in data:
                 raise ValueError("Missing keys in Reconciler output")
             if data["status"] not in ["Corroborated", "Contradiction", "Reconciled by Context"]:
@@ -229,7 +194,7 @@ def process_fact_with_agents(client, model_name, new_fact, memory):
 
 if __name__ == "__main__":
     from dotenv import load_dotenv
-    from extractor import get_client_and_model
+    from config import get_client_and_model
     from memory import FactMemory
     
     load_dotenv()

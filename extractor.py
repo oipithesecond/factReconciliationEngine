@@ -1,10 +1,12 @@
 import os
 import json
+import re
 import time
 import pdfplumber
 from dotenv import load_dotenv
-from openai import OpenAI, RateLimitError, InternalServerError
+from openai import RateLimitError, InternalServerError
 from pydantic import BaseModel, Field
+from config import create_json_completion, get_client_and_model
 
 # defining the JSON schema 
 class Fact(BaseModel):
@@ -75,6 +77,15 @@ def parse_and_chunk_pdf(pdf_path):
     print(f"Successfully chunked into {len(chunks)} pages.")
     return chunks
 
+def verify_source_quote(quote: str, page_text: str, overlap_text: str = "") -> bool:
+    """Check whether the extracted quote appears in the source text (whitespace-normalized)."""
+    if not quote or not quote.strip():
+        return False
+    norm = lambda s: re.sub(r"\s+", " ", s).strip().lower()
+    haystack = norm(f"{overlap_text} {page_text}")
+    return norm(quote) in haystack
+
+
 # extractor agent
 def extract_facts_from_chunk(client, chunk, model_name, max_retries=5):
     system_prompt = (
@@ -108,37 +119,26 @@ def extract_facts_from_chunk(client, chunk, model_name, max_retries=5):
     
     for attempt in range(1, max_retries + 1):
         try:
-            response = client.chat.completions.create(
-                model=model_name,
-                messages=messages,
+            data = create_json_completion(
+                client,
+                model_name,
+                messages,
                 temperature=0.0,
-                max_tokens=8192, # prevents JSON truncation on dense tables
+                max_tokens=8192,  # prevents JSON truncation on dense tables
             )
-            
-            raw_text = response.choices[0].message.content.strip()
-            
-            if "```json" in raw_text:
-                raw_text = raw_text.split("```json")[1].split("```")[0].strip()
-            elif "```" in raw_text:
-                raw_text = raw_text.split("```")[1].split("```")[0].strip()
-                
-            # Isolate the JSON object
-            start_idx = raw_text.find('{')
-            end_idx = raw_text.rfind('}')
-            if start_idx != -1 and end_idx != -1:
-                raw_text = raw_text[start_idx:end_idx+1]
-                
-            try:
-                data = json.loads(raw_text)
-                # Enforce page_number mapping to prevent LLM hallucinations of page numbers
-                if "facts" in data:
-                    for fact in data["facts"]:
-                        fact["page_number"] = chunk["page_number"]
-                return data
-            except json.JSONDecodeError:
-                print(f"\n[DEBUG] JSON Decode Error on page {chunk['page_number']}. Model output was:\n{raw_text}\n")
-                raise ValueError("Model returned invalid JSON.")
-
+            # Enforce page_number mapping and verify source quotes against page text
+            if "facts" in data:
+                for fact in data["facts"]:
+                    fact["page_number"] = chunk["page_number"]
+                    fact["quote_verified"] = verify_source_quote(
+                        fact.get("source_quote", ""),
+                        chunk.get("text", ""),
+                        chunk.get("overlap_text", ""),
+                    )
+            return data
+        except json.JSONDecodeError:
+            print(f"\n[DEBUG] JSON Decode Error on page {chunk['page_number']} (Attempt {attempt}/{max_retries}).")
+            time.sleep(2)
         except (RateLimitError, InternalServerError) as e:
             print(f"Rate limit / server busy on page {chunk['page_number']}. Retrying in {delay}s (Attempt {attempt}/{max_retries})...")
             time.sleep(delay)
@@ -148,24 +148,6 @@ def extract_facts_from_chunk(client, chunk, model_name, max_retries=5):
             time.sleep(5)
     
     raise RuntimeError(f"Exceeded max retries for page {chunk['page_number']}")
-
-def get_client_and_model():
-    """Initialize and return the OpenAI-compatible client and model name from env vars."""
-    if os.getenv("RAPIDROUTER_API_KEY"):
-        client = OpenAI(
-            base_url="https://rapidrouter.ai/api/v1",
-            api_key=os.getenv("RAPIDROUTER_API_KEY")
-        )
-        return client, "openai/gpt-oss-120b"
-    if os.getenv("OPENAI_API_KEY"):
-        return OpenAI(api_key=os.getenv("OPENAI_API_KEY")), "gpt-4o-mini"
-    if os.getenv("GROQ_API_KEY"):
-        client = OpenAI(
-            base_url="https://api.groq.com/openai/v1",
-            api_key=os.getenv("GROQ_API_KEY")
-        )
-        return client, "openai/gpt-oss-120b"
-    return None, None
 
 # main
 if __name__ == "__main__":
