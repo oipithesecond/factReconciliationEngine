@@ -65830,5 +65830,210 @@
                 "distance": 0.41894251108169556
             }
         ]
+    },
+    {
+        "fact": {
+            "topic": "Economic growth",
+            "fact": "6.5 percent growth in FY2024/25",
+            "time_period": "FY2024/25",
+            "source_quote": "Following economic growth of 6.5 percent in FY2024/25",
+            "page_number": 3
+        },
+        "source_pdf": "03-imf-india-2025-article-iv-excerpt.pdf",
+        "status": "Reconciled by Context",
+        "reasoning": "Skeptic flagged: - Historical Fact 1 (Economic Growth) states: \"Following economic growth of 6.5 percent in FY2024/25\" (source: 03-imf-india-2025-article-iv-excerpt.pdf, page 3).\n- Historical Fact 2 (Overall GDP Growth) states: \"6.5% growth in FY 2024-25\" (source: 02-rbi-annual-report-2024-25-excerpt.pdf, page 24).\n- Historical Fact 3 (Average GDP Growth) states: \"Average GDP growth was 5.9% in FY23, 5.9% in FY24, and 5.8% in FY25\" (source: 01-india-economic-survey-2024-25-excerpt.pdf, page 77).\n- The New Fact repeats: \"Following economic growth of 6.5 percent in FY2024/25\" (page 3).\n- While Facts 1 and 2 corroborate the New Fact, Fact 3 reports a different growth rate for FY25 (5.8%), which directly contradicts the 6.5% figure for the same fiscal year. This creates a mutually exclusive claim about the growth rate for FY2024/25.\n- Therefore, a contradiction exists, but the new fact is also supported by at least one historical source.\nReconciler verdict: - Historical Fact 1 (Economic Growth): \"Following economic growth of 6.5 percent in FY2024/25\" (03-imf-india-2025-article-iv-excerpt.pdf, p.3)\n- Historical Fact 2 (Overall GDP Growth): \"6.5% growth in FY 2024-25\" (02-rbi-annual-report-2024-25-excerpt.pdf, p.24)\n- Historical Fact 3 (Average GDP Growth): \"Average GDP growth was 5.9% in FY23, 5.9% in FY24, and 5.8% in FY25\" (01-india-economic-survey-2024-25-excerpt.pdf, p.77)\n- New Fact: \"Following economic growth of 6.5 percent in FY2024/25\" (page 3)\n\nThe new fact matches Historical Facts 1 and 2, both reporting a 6.5% growth rate for FY2024/25. Historical Fact 3, however, reports a 5.8% figure for FY25, but it explicitly labels the metric as \"Average GDP growth\" \u2013 a different statistical measure that can refer to an average across regions, sectors, or a different calculation method (e.g., real vs. nominal). Because the terminology and likely scope differ, the apparent mismatch is explainable by context rather than a direct factual contradiction. Therefore the relationship is best described as **Reconciled by Context**.",
+        "retrieved_facts": [
+            {
+                "page_number": 3,
+                "fact": "Following economic growth of 6.5 percent in FY2024/25",
+                "source_pdf": "03-imf-india-2025-article-iv-excerpt.pdf",
+                "source_quote": "Following economic growth of 6.5 percent in FY2024/25",
+                "topic": "Economic Growth",
+                "time_period": "FY2024/25",
+                "distance": 0.04406583309173584
+            },
+            {
+                "topic": "Overall GDP Growth",
+                "fact": "6.5% growth in FY 2024-25",
+                "source_pdf": "02-rbi-annual-report-2024-25-excerpt.pdf",
+                "page_number": 24,
+                "time_period": "FY 2024-25",
+                "source_quote": "IV. GDP -5.8 9.7 7.6 9.2 6.5",
+                "distance": 0.16377580165863037
+            },
+            {
+                "time_period": "FY23\u2011FY25",
+                "fact": "Average GDP growth was 5.9% in FY23, 5.9% in FY24, and 5.8% in FY25.",
+                "page_number": 77,
+                "topic": "Average GDP Growth",
+                "source_pdf": "01-india-economic-survey-2024-25-excerpt.pdf",
+                "source_quote": "5.9 5.9 5.8 ... Av. GDP Growth",
+                "distance": 0.20846378803253174
+            }
+        ]
+    },
+    {
+        "fact": {
+            "topic": "Real GDP expansion",
+            "fact": "7.8 percent expansion in the first quarter of FY2025/26",
+            "time_period": "Q1 FY2025/26",
+            "source_quote": "real GDP expanded by 7.8 percent in the first quarter of FY2025/26.",
+            "page_number": 3
+        },
+        "source_pdf": "03-imf-india-2025-article-iv-excerpt.pdf",
+        "status": "Corroborated",
+        "reasoning": "Skeptic confirmed alignment: - The new fact states: \"real GDP expanded by 7.8 percent in the first quarter of FY2025/26\" (source quote from the new fact). \n- Historical Fact 1 (Quarterly Real GDP Expansion) says: \"real GDP expanded by 7.8 percent in the first quarter of FY2025/26\" (source quote from the historical list). This is an exact match, confirming the new fact.\n- Historical Fact 2 (Projected Real GDP Growth) notes a projected annual growth of 6.6\u202fpercent for FY2025/26, which does not conflict with a 7.8\u202fpercent expansion in the first quarter; a quarterly spike can coexist with a lower annual average.\n- Historical Fact 3 (Real GDP Growth (Total)) refers to FY\u202f2024\u201125 with a 7.1\u202fpercent growth, a different fiscal year, and therefore unrelated.\n\nSince the new fact aligns perfectly with an existing historical fact and there is no contradictory information, the fact is not flagged and is corroborated.",
+        "retrieved_facts": [
+            {
+                "topic": "Quarterly Real GDP Expansion",
+                "source_pdf": "03-imf-india-2025-article-iv-excerpt.pdf",
+                "fact": "real GDP expanded by 7.8 percent in the first quarter of FY2025/26",
+                "time_period": "FY2025/26 Q1",
+                "source_quote": "real GDP expanded by 7.8 percent in the first quarter of FY2025/26",
+                "page_number": 3,
+                "distance": 0.06272274255752563
+            },
+            {
+                "source_quote": "real GDP is projected to grow at 6.6 percent in FY2025/26",
+                "fact": "real GDP is projected to grow at 6.6 percent in FY2025/26",
+                "source_pdf": "03-imf-india-2025-article-iv-excerpt.pdf",
+                "time_period": "FY2025/26 (projected)",
+                "topic": "Projected Real GDP Growth",
+                "page_number": 3,
+                "distance": 0.19204092025756836
+            },
+            {
+                "source_quote": "I. Total -4.6 9.8 7.0 5.9 7.1",
+                "fact": "7.1% growth in FY 2024-25",
+                "page_number": 24,
+                "topic": "Real GDP Growth (Total)",
+                "source_pdf": "02-rbi-annual-report-2024-25-excerpt.pdf",
+                "time_period": "FY 2024-25",
+                "distance": 0.1956215500831604
+            }
+        ]
+    },
+    {
+        "fact": {
+            "topic": "Projected real GDP growth",
+            "fact": "6.6 percent growth projected for FY2025/26",
+            "time_period": "FY2025/26",
+            "source_quote": "real GDP is projected to grow at 6.6 percent in FY2025/26",
+            "page_number": 3
+        },
+        "source_pdf": "03-imf-india-2025-article-iv-excerpt.pdf",
+        "status": "Corroborated",
+        "reasoning": "Skeptic confirmed alignment: - Historical Fact 1 states: \"real GDP is projected to grow at 6.6 percent in FY2025/26\" (FY2025/26 projected). \n- Historical Fact 2 states: \"real GDP growth is projected at 6.6 percent in FY2025/26\" (FY2025/26). \n- The New Fact says: \"real GDP is projected to grow at 6.6 percent in FY2025/26\" (FY2025/26). \nThese statements are identical in metric, value, and time period, showing clear agreement. No historical fact presents a different projection for FY2025/26, so there is no contradiction. The new fact is therefore corroborated by the historical facts.",
+        "retrieved_facts": [
+            {
+                "fact": "real GDP is projected to grow at 6.6 percent in FY2025/26",
+                "source_pdf": "03-imf-india-2025-article-iv-excerpt.pdf",
+                "time_period": "FY2025/26 (projected)",
+                "page_number": 3,
+                "topic": "Projected Real GDP Growth",
+                "source_quote": "real GDP is projected to grow at 6.6 percent in FY2025/26",
+                "distance": 0.04105645418167114
+            },
+            {
+                "source_quote": "real GDP growth is projected at 6.6 percent in FY2025/26",
+                "fact": "Real GDP growth is projected at 6.6 percent in FY2025/26.",
+                "topic": "GDP growth projection",
+                "time_period": "FY2025/26",
+                "page_number": 13,
+                "source_pdf": "03-imf-india-2025-article-iv-excerpt.pdf",
+                "distance": 0.0487712025642395
+            },
+            {
+                "source_pdf": "03-imf-india-2025-article-iv-excerpt.pdf",
+                "topic": "Projected Real GDP Growth",
+                "page_number": 3,
+                "time_period": "FY2026/27 (projected)",
+                "fact": "real GDP is projected to grow at 6.2 percent in FY2026/27",
+                "source_quote": "real GDP is projected to grow at 6.2 percent in FY2026/27",
+                "distance": 0.08590954542160034
+            }
+        ]
+    },
+    {
+        "fact": {
+            "topic": "Projected real GDP growth",
+            "fact": "6.2 percent growth projected for FY2026/27",
+            "time_period": "FY2026/27",
+            "source_quote": "real GDP is projected to grow at ... 6.2 percent in FY2026/27",
+            "page_number": 3
+        },
+        "source_pdf": "03-imf-india-2025-article-iv-excerpt.pdf",
+        "status": "Corroborated",
+        "reasoning": "Skeptic confirmed alignment: - Historical Fact 1 states: \"real GDP is projected to grow at 6.2 percent in FY2026/27\" (FY2026/27 projected). \n- The New Fact says: \"real GDP is projected to grow at ... 6.2 percent in FY2026/27\" (FY2026/27). \nThese two statements are identical in both the projected growth rate (6.2%) and the fiscal year (FY2026/27). There is no conflict with the other historical facts, which concern FY2025/26 at 6.6%. Therefore, the new fact does not contradict any historical fact and is directly supported by Historical Fact 1.",
+        "retrieved_facts": [
+            {
+                "page_number": 3,
+                "source_quote": "real GDP is projected to grow at 6.2 percent in FY2026/27",
+                "time_period": "FY2026/27 (projected)",
+                "fact": "real GDP is projected to grow at 6.2 percent in FY2026/27",
+                "topic": "Projected Real GDP Growth",
+                "source_pdf": "03-imf-india-2025-article-iv-excerpt.pdf",
+                "distance": 0.048386573791503906
+            },
+            {
+                "source_pdf": "03-imf-india-2025-article-iv-excerpt.pdf",
+                "time_period": "FY2025/26",
+                "source_quote": "real GDP is projected to grow at 6.6 percent in FY2025/26",
+                "page_number": 3,
+                "fact": "6.6 percent growth projected for FY2025/26",
+                "topic": "Projected real GDP growth",
+                "distance": 0.06093192100524902
+            },
+            {
+                "source_pdf": "03-imf-india-2025-article-iv-excerpt.pdf",
+                "source_quote": "real GDP is projected to grow at 6.6 percent in FY2025/26",
+                "time_period": "FY2025/26 (projected)",
+                "topic": "Projected Real GDP Growth",
+                "fact": "real GDP is projected to grow at 6.6 percent in FY2025/26",
+                "page_number": 3,
+                "distance": 0.07657104730606079
+            }
+        ]
+    },
+    {
+        "fact": {
+            "topic": "Trade policy assumption",
+            "fact": "Baseline assumption of prolonged 50 percent U.S. tariffs",
+            "time_period": "baseline scenario",
+            "source_quote": "under the baseline assumption of prolonged 50 percent U.S. tariffs",
+            "page_number": 3
+        },
+        "source_pdf": "03-imf-india-2025-article-iv-excerpt.pdf",
+        "status": "Corroborated",
+        "reasoning": "Skeptic confirmed alignment: - The historical fact list includes an entry that states: \"under the baseline assumption of prolonged 50 percent U.S. tariffs\" (baseline scenario)\u3010source_quote\u3011. The new fact repeats the same statement: \"under the baseline assumption of prolonged 50 percent U.S. tariffs\" (baseline scenario)\u3010source_quote\u3011. Since the new fact matches the historical fact exactly, there is no contradiction and it is directly corroborated.",
+        "retrieved_facts": [
+            {
+                "time_period": "baseline scenario",
+                "page_number": 21,
+                "topic": "U.S. tariff assumption",
+                "fact": "Baseline assumption of prolonged 50 percent U.S. tariffs",
+                "source_pdf": "03-imf-india-2025-article-iv-excerpt.pdf",
+                "source_quote": "under the baseline assumption of prolonged 50 percent U.S. tariffs",
+                "distance": 0.06822216510772705
+            },
+            {
+                "topic": "Trade policy - tariff shock",
+                "source_quote": "The imposition of the 50 percent U.S. tariffs in August will weigh on the outlook, but the magnitude is expected to remain manageable as India has relatively limited exposure to merchandise exports.",
+                "time_period": "August 2024",
+                "source_pdf": "03-imf-india-2025-article-iv-excerpt.pdf",
+                "page_number": 32,
+                "fact": "Imposition of 50 percent U.S. tariffs in August will weigh on the outlook.",
+                "distance": 0.26245296001434326
+            },
+            {
+                "page_number": 9,
+                "topic": "Trade tariffs",
+                "source_pdf": "03-imf-india-2025-article-iv-excerpt.pdf",
+                "fact": "Since August 27, 2025, India has been subject to 50 percent tariffs on merchandise exports to the U.S., raising the effective tariff rate to 37.8 percent",
+                "time_period": "Since August 27, 2025",
+                "source_quote": "Since August 27, 2025, India has been subject to 50 percent tariffs on merchandise exports to the U.S., raising the effective tariff rate to 37.8 percent.",
+                "distance": 0.4076310992240906
+            }
+        ]
     }
 ]

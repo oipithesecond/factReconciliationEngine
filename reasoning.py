@@ -229,22 +229,14 @@ def process_fact_with_agents(client, model_name, new_fact, memory):
 
 if __name__ == "__main__":
     from dotenv import load_dotenv
-    from openai import OpenAI
+    from extractor import get_client_and_model
     from memory import FactMemory
     
     load_dotenv()
     
-    if os.getenv("OPENAI_API_KEY"):
-        client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-        model_name = "gpt-4o-mini"
-    elif os.getenv("GROQ_API_KEY"):
-        client = OpenAI(
-            base_url="https://api.groq.com/openai/v1",
-            api_key=os.getenv("GROQ_API_KEY")
-        )
-        model_name = "openai/gpt-oss-120b"
-    else:
-        print("Set OPENAI_API_KEY or GROQ_API_KEY")
+    client, model_name = get_client_and_model()
+    if not client:
+        print("Set RAPIDROUTER_API_KEY, OPENAI_API_KEY, or GROQ_API_KEY")
         exit(1)
         
     memory = FactMemory()

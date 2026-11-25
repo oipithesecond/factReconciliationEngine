@@ -11247,5 +11247,40 @@
         "time_period": "current",
         "source_quote": "With over 40 percent of the workforce still in agriculture",
         "page_number": 92
+    },
+    {
+        "topic": "Economic growth",
+        "fact": "6.5 percent growth in FY2024/25",
+        "time_period": "FY2024/25",
+        "source_quote": "Following economic growth of 6.5 percent in FY2024/25",
+        "page_number": 3
+    },
+    {
+        "topic": "Real GDP expansion",
+        "fact": "7.8 percent expansion in the first quarter of FY2025/26",
+        "time_period": "Q1 FY2025/26",
+        "source_quote": "real GDP expanded by 7.8 percent in the first quarter of FY2025/26.",
+        "page_number": 3
+    },
+    {
+        "topic": "Projected real GDP growth",
+        "fact": "6.6 percent growth projected for FY2025/26",
+        "time_period": "FY2025/26",
+        "source_quote": "real GDP is projected to grow at 6.6 percent in FY2025/26",
+        "page_number": 3
+    },
+    {
+        "topic": "Projected real GDP growth",
+        "fact": "6.2 percent growth projected for FY2026/27",
+        "time_period": "FY2026/27",
+        "source_quote": "real GDP is projected to grow at ... 6.2 percent in FY2026/27",
+        "page_number": 3
+    },
+    {
+        "topic": "Trade policy assumption",
+        "fact": "Baseline assumption of prolonged 50 percent U.S. tariffs",
+        "time_period": "baseline scenario",
+        "source_quote": "under the baseline assumption of prolonged 50 percent U.S. tariffs",
+        "page_number": 3
     }
 ]

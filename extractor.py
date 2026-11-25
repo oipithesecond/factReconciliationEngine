@@ -149,24 +149,31 @@ def extract_facts_from_chunk(client, chunk, model_name, max_retries=5):
     
     raise RuntimeError(f"Exceeded max retries for page {chunk['page_number']}")
 
-# main
-if __name__ == "__main__":
-    load_dotenv()
-
-    # Ensure API key is not empty and initialize AI client
+def get_client_and_model():
+    """Initialize and return the OpenAI-compatible client and model name from env vars."""
+    if os.getenv("RAPIDROUTER_API_KEY"):
+        client = OpenAI(
+            base_url="https://rapidrouter.ai/api/v1",
+            api_key=os.getenv("RAPIDROUTER_API_KEY")
+        )
+        return client, "openai/gpt-oss-120b"
     if os.getenv("OPENAI_API_KEY"):
-        print("using OpenAI Key")
-        client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-        model_name = "gpt-4o-mini"
-    elif os.getenv("GROQ_API_KEY"):
-        print("using GROQ Key")
+        return OpenAI(api_key=os.getenv("OPENAI_API_KEY")), "gpt-4o-mini"
+    if os.getenv("GROQ_API_KEY"):
         client = OpenAI(
             base_url="https://api.groq.com/openai/v1",
             api_key=os.getenv("GROQ_API_KEY")
         )
-        model_name = "openai/gpt-oss-120b"
-    else:
-        print("Error: Please set either OPENAI_API_KEY or GROQ_API_KEY in your .env file.")
+        return client, "openai/gpt-oss-120b"
+    return None, None
+
+# main
+if __name__ == "__main__":
+    load_dotenv()
+
+    client, model_name = get_client_and_model()
+    if not client:
+        print("Error: Please set RAPIDROUTER_API_KEY, OPENAI_API_KEY, or GROQ_API_KEY in your .env file.")
         exit(1)
         
     pdf_file = "sample.pdf" 

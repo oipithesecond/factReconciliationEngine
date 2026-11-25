@@ -3,16 +3,15 @@ import os
 import json
 import time
 from dotenv import load_dotenv
-from openai import OpenAI
 from memory import FactMemory
-from extractor import parse_and_chunk_pdf, extract_facts_from_chunk
+from extractor import parse_and_chunk_pdf, extract_facts_from_chunk, get_client_and_model as _get_client_and_model
 from reasoning import process_fact_with_agents
 
 # Load environment variables
 load_dotenv()
 
 # Initialize Streamlit configuration
-st.set_page_config(page_title="Fact Knowledge Layer", layout="wide")
+st.set_page_config(page_title="Fact Reconciliation Engine", layout="wide")
 
 # Persistent data file for the dashboard
 DASHBOARD_DATA_FILE = "dashboard_data.json"
@@ -44,17 +43,9 @@ def save_extracted_facts(data):
         json.dump(data, f, indent=4)
 
 def get_client_and_model():
-    if os.getenv("OPENAI_API_KEY"):
-        client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-        model_name = "gpt-4o-mini"
-    elif os.getenv("GROQ_API_KEY"):
-        client = OpenAI(
-            base_url="https://api.groq.com/openai/v1",
-            api_key=os.getenv("GROQ_API_KEY")
-        )
-        model_name = "openai/gpt-oss-120b"
-    else:
-        st.error("Please set OPENAI_API_KEY or GROQ_API_KEY in .env")
+    client, model_name = _get_client_and_model()
+    if not client:
+        st.error("Please set RAPIDROUTER_API_KEY, OPENAI_API_KEY, or GROQ_API_KEY in .env")
         st.stop()
     return client, model_name
 
@@ -118,7 +109,7 @@ def render_fact_card(item):
                 st.write(f"- Source: {rf.get('source_pdf', '')} (Page {rf.get('page_number', '')})")
 
 def main():
-    st.title("Fact Knowledge Layer")
+    st.title("Fact Reconciliation Engine")
     
     client, model_name = get_client_and_model()
     memory = FactMemory()

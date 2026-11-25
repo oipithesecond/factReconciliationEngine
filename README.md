@@ -1,4 +1,4 @@
-# Fact Knowledge Layer
+# Fact Reconciliation Engine
 
 A multi-agent retrieval-augmented generation (RAG) system that extracts, grounds, and dynamically reconciles facts across multiple PDFs. 
 
@@ -18,23 +18,17 @@ pip install -r requirements.txt
 **2. API Configuration:**
 Create a `.env` file in the root directory. The system is designed to seamlessly auto-detect your provider based on the key you supply, making it incredibly easy for you to test.
 
-To ensure a frictionless review process for you without credit card requirements, you can use a free Groq API key (OpenAI compatible):
+You can use a RapidRouter API key (OpenAI compatible):
 ```env
 # .env
-GROQ_API_KEY=your_api_key_here
+RAPIDROUTER_API_KEY=your_api_key_here
 ```
-*(Alternatively, simply provide an `OPENAI_API_KEY` instead, and the system will automatically configure itself to use OpenAI models without requiring any code changes).*
+*(Alternatively, you can provide a `GROQ_API_KEY` or an `OPENAI_API_KEY` instead, and the system will automatically configure itself without requiring any code changes).*
 
 **3. Run the Dashboard:**
 ```bash
 python -m streamlit run app.py   
 ```
-
-## Video Demo
-
-**[YouTube Demo Link](https://www.youtube.com/watch?v=tMikT79sOOc)**
-
-*(The 3-minute demo covers the live processing of a new PDF and walks through the four required cases: Corroboration, Contradiction, Contextual Reconciliation, and Failure Handling).*
 
 ## Approach
 
